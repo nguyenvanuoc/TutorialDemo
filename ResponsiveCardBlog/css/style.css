@@ -1,0 +1,161 @@
+/*Color*/
+/*---Reset*/
+* {
+  box-sizing: border-box; }
+
+body, html {
+  padding: 0px;
+  font-size: 14px;
+  margin: 0px;
+  font-family: "Open Sans",Arial, Helvetica, sans-serif; }
+
+.box-cards-blog {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px 40px; }
+
+.card {
+  margin-bottom: 20px;
+  display: flex;
+  background-color: #fff;
+  transition: box-shadow 0.3s ease;
+  border-radius: 20px; }
+  .card:hover {
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0px 24px 64px rgba(0, 0, 0, 0.04); }
+  .card .card-image {
+    width: 30%; }
+    .card .card-image img {
+      width: 100%;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px; }
+  .card .card-meta {
+    width: 70%;
+    padding: 1rem;
+    flex: 1;
+    margin-left: 1rem; }
+  .card .card-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2rem;
+    margin: 0px;
+    margin-bottom: 1rem; }
+    .card .card-title > a {
+      display: block;
+      color: #081F32;
+      text-decoration: none; }
+      .card .card-title > a:hover {
+        color: #007AE9; }
+  .card .card-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem; }
+    .card .card-top .cat {
+      display: block;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #6E798C; }
+      .card .card-top .cat:hover {
+        color: #007AE9; }
+    .card .card-top .date {
+      color: #6E798C; }
+  .card .card-bottom {
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-between; }
+    .card .card-bottom .avatar {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 0.5rem; }
+      .card .card-bottom .avatar img {
+        width: 32px;
+        height: 32px;
+        justify-content: space-between; }
+    .card .card-bottom .username {
+      color: #007AE9;
+      font-weight: 600; }
+    .card .card-bottom .readmore {
+      display: block;
+      padding: 5px 10px;
+      text-decoration: none;
+      color: #007AE9;
+      font-weight: 600;
+      transition: transform 0.3s ease; }
+      .card .card-bottom .readmore:hover {
+        transition: transform 0.3s ease;
+        transform: translateX(-10px); }
+
+.box-cards-blog.-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .box-cards-blog.-grid .card {
+    width: calc(33.33333% - 10px);
+    display: block;
+    padding: 1rem; }
+    .box-cards-blog.-grid .card .card-title {
+      font-size: 1.5rem; }
+    .box-cards-blog.-grid .card .card-image {
+      width: 100%; }
+      .box-cards-blog.-grid .card .card-image img {
+        border-radius: 20px;
+        width: 100%; }
+    .box-cards-blog.-grid .card .card-meta {
+      width: 100%;
+      margin-left: 0px;
+      padding: 0px;
+      margin-top: 1rem; }
+
+.tabs {
+  text-align: center;
+  max-width: 200px;
+  margin: auto;
+  width: 100%;
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between; }
+  .tabs .tab {
+    width: calc(50% - 5px);
+    text-align: center;
+    padding: 7px 10px;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    cursor: pointer; }
+    .tabs .tab:hover {
+      background-color: #f5f5f5; }
+    .tabs .tab.active {
+      background-color: #007AE9;
+      color: #fff;
+      border-color: #007AE9; }
+
+/*Responsive*/
+@media (max-width: 991px) {
+  .box-cards-blog.-grid {
+    display: block; }
+    .box-cards-blog.-grid .card {
+      width: 100%;
+      display: flex; }
+      .box-cards-blog.-grid .card .card-image {
+        width: 200px; }
+      .box-cards-blog.-grid .card .card-meta {
+        margin-left: 20px;
+        margin-top: 0px; } }
+
+@media (max-width: 768px) {
+  .box-cards-blog {
+    padding: 20px; }
+  .card {
+    display: block; }
+  .card .card-image {
+    width: 100%; }
+    .card .card-image img {
+      border-radius: 20px; }
+  .card .card-meta {
+    width: 100%;
+    margin-left: 0px; }
+  .box-cards-blog.-grid .card {
+    display: block; }
+    .box-cards-blog.-grid .card .card-image {
+      width: 100%; }
+    .box-cards-blog.-grid .card .card-meta {
+      margin-left: 0px;
+      margin-top: 1rem; } }

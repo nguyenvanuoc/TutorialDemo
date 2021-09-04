@@ -1,0 +1,121 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Blog</title>
+    <!-- Font Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Open+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Import My style -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="tabs">
+        <span class="tab" tab="0">List</span>
+        <span class="tab active" tab="1">Grid</span>
+    </div>
+    <div class="box-cards-blog -grid">
+        <div class="card">
+            <div class="card-image">
+                <a href="#"><img src="images/img1.svg" alt=""></a>
+            </div>
+            <div class="card-meta">
+                <div class="card-top">
+                    <a href="#" class="cat">PRODUCTIVITY</a>
+                    <span class="date">3 days ago</span>
+                </div>
+                <h2 class="card-title"><a href="#">    7 Skills of Highly Effective Programmers</a></h2>
+                <div class="card-desc">
+                    Our team was inspired by the seven skills of highly effective programmers created by the TechLead. We wanted to provide
+                    our own take on the topic. Here are our seven skills of effective programmers...
+                </div>
+                <div class="card-bottom">
+                    <div class="user">
+                        <div class="avatar">
+                            <img src="images/avatar1.png" alt="">
+                        </div>
+                        <span class="username">Glen Williams</span>
+                    </div>
+                    <a href="#" class="readmore">
+                        Read more →
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-image">
+                <a href="#"><img src="images/img2.svg" alt=""></a>
+            </div>
+            <div class="card-meta">
+                <div class="card-top">
+                    <a href="#" class="cat">PRODUCTIVITY</a>
+                    <span class="date">3 days ago</span>
+                </div>
+                <h2 class="card-title"><a href="#">    7 Skills of Highly Effective Programmers</a></h2>
+                <div class="card-desc">
+                    Our team was inspired by the seven skills of highly effective programmers created by the TechLead. We wanted to provide
+                    our own take on the topic. Here are our seven skills of effective programmers...
+                </div>
+                <div class="card-bottom">
+                    <div class="user">
+                        <div class="avatar">
+                            <img src="images/avatar1.png" alt="">
+                        </div>
+                        <span class="username">Glen Williams</span>
+                    </div>
+                    <a href="#" class="readmore">
+                        Read more →
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-image">
+                <a href="#"><img src="images/img3.svg" alt=""></a>
+            </div>
+            <div class="card-meta">
+                <div class="card-top">
+                    <a href="#" class="cat">PRODUCTIVITY</a>
+                    <span class="date">3 days ago</span>
+                </div>
+                <h2 class="card-title"><a href="#">    7 Skills of Highly Effective Programmers</a></h2>
+                <div class="card-desc">
+                    Our team was inspired by the seven skills of highly effective programmers created by the TechLead. We wanted to provide
+                    our own take on the topic. Here are our seven skills of effective programmers...
+                </div>
+                <div class="card-bottom">
+                    <div class="user">
+                        <div class="avatar">
+                            <img src="images/avatar1.png" alt="">
+                        </div>
+                        <span class="username">Glen Williams</span>
+                    </div>
+                    <a href="#" class="readmore">
+                        Read more →
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        $(".tab").click(function(){
+            $(this).siblings().removeClass("active");
+            $(this).addClass("active");
+            if($(this).attr('tab')=='0'){
+                $('.box-cards-blog').removeClass("-grid");
+            }else{
+                $('.box-cards-blog').addClass("-grid");
+            }
+        });
+    </script>
+</body>
+</html>
