@@ -1,0 +1,297 @@
+/*Clear Style Default*/
+* {
+  box-sizing: border-box; }
+
+body, html {
+  font-size: 18px;
+  padding: 0px;
+  margin: 0px;
+  font-family: "Open Sans",Arial, Helvetica, sans-serif; }
+
+.container {
+  max-width: 991px;
+  margin: auto;
+  padding: 0px 40px; }
+
+.menu-box {
+  position: fixed;
+  top: 0px;
+  left: -100%;
+  bottom: 0px;
+  background-color: #fff;
+  z-index: 100;
+  width: 280px;
+  padding: 10px 20px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease; }
+  .menu-box.show {
+    transition: all 0.3s ease;
+    opacity: 1;
+    left: 0px;
+    visibility: visible; }
+  .menu-box .close {
+    position: absolute;
+    top: 0px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    right: 0px;
+    font-size: 20px;
+    cursor: pointer; }
+    .menu-box .close i {
+      line-height: 30px; }
+  .menu-box .menus {
+    list-style: none;
+    padding: 0px;
+    margin: auto; }
+    .menu-box .menus a {
+      display: block;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: #000; }
+      .menu-box .menus a:hover {
+        color: #2F80ED; }
+    .menu-box .menus li.active > a {
+      font-weight: 600; }
+
+.nav-toggle {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  position: fixed;
+  padding: 0px;
+  flex-wrap: wrap;
+  cursor: pointer;
+  align-content: space-around;
+  z-index: 10;
+  top: 2rem;
+  left: 40px;
+  padding: 4px;
+  background: #fff; }
+  .nav-toggle .bar {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: #000; }
+  .nav-toggle:hover .bar {
+    background: #2F80ED; }
+
+.header {
+  text-align: center;
+  padding: 2rem 0px;
+  margin-bottom: 2rem; }
+  .header .logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 10px;
+    display: block;
+    cursor: pointer;
+    color: #000;
+    text-decoration: none; }
+
+.blog-news-box .item {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between; }
+
+.blog-news-box .post-thumb {
+  width: calc(50% - 10px); }
+
+.blog-news-box .post-info {
+  width: calc(50% - 10px); }
+
+.post-thumb {
+  display: block; }
+  .post-thumb img {
+    width: 100%; }
+
+.post-title {
+  margin-top: 0px;
+  margin-bottom: 0.5rem;
+  font-size: 1.55556rem; }
+  .post-title > a {
+    color: #000;
+    text-decoration: none; }
+    .post-title > a:hover {
+      color: #2F80ED; }
+
+.post-date {
+  font-size: 0.77778rem;
+  color: #888; }
+
+.post-desc {
+  margin-top: 0.5rem;
+  line-height: 1.83333; }
+
+.post-actions {
+  text-align: center;
+  margin-top: 1rem; }
+  .post-actions .btn {
+    padding: 7px 20px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    display: inline-block;
+    color: #000;
+    text-decoration: none; }
+    .post-actions .btn:hover {
+      background: #000;
+      color: #fff; }
+
+.overlay-common {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 99;
+  top: 0px;
+  background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  display: none; }
+  .overlay-common.show {
+    display: block; }
+
+.footer-social {
+  text-align: center;
+  margin: 2rem 0px;
+  margin-top: 4rem; }
+  .footer-social a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #eee;
+    line-height: 40px;
+    margin: 0px 5px;
+    font-size: 1.5rem;
+    color: #000;
+    cursor: pointer; }
+    .footer-social a i {
+      line-height: 40px; }
+    .footer-social a:hover {
+      background: #000;
+      color: #fff; }
+
+.article {
+  line-height: 2rem;
+  font-size: 1rem; }
+  .article img {
+    max-width: 100%; }
+
+.article-box .post-title {
+  text-align: center; }
+
+.article-box .post-date {
+  text-align: center;
+  margin-bottom: 2rem; }
+
+.box-input-comment {
+  margin-bottom: 1rem; }
+  .box-input-comment .title {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold; }
+  .box-input-comment .form-control {
+    width: 100%;
+    border: 1px solid #d0d0d0;
+    background: #f5f5f5;
+    padding: 10px;
+    outline: 0px;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease; }
+    .box-input-comment .form-control:focus {
+      transition: border-color 0.3s ease;
+      border-color: #000; }
+  .box-input-comment .actions {
+    margin-top: 1rem;
+    text-align: right; }
+  .box-input-comment .btn-comment {
+    padding: 7px 20px;
+    border-radius: 5px;
+    border: 0px;
+    font-size: 1rem;
+    font-weight: bold;
+    background: #555;
+    color: #fff;
+    cursor: pointer; }
+    .box-input-comment .btn-comment:hover {
+      background: #000;
+      color: #fff; }
+
+/*List-comment*/
+.list-comments .item {
+  display: flex;
+  margin-bottom: 2rem; }
+
+.list-comments .avatar {
+  width: 50px; }
+  .list-comments .avatar img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%; }
+
+.list-comments .comment-info {
+  margin-left: 1rem; }
+
+.list-comments .mess {
+  background: #eee;
+  padding: 1rem;
+  margin-bottom: 0.5rem; }
+
+/*Similar Post*/
+.similar-post .title {
+  text-align: center;
+  margin: 0px;
+  font-size: 1rem;
+  margin-bottom: 1rem; }
+
+.similar-post .list-news {
+  display: flex;
+  justify-content: space-between; }
+  .similar-post .list-news .item {
+    width: calc(33.333% - 10px); }
+
+.similar-post .post-title {
+  margin-top: 0.5rem; }
+  .similar-post .post-title > a {
+    font-size: 1rem;
+    font-weight: normal; }
+
+/*Footer*/
+.footer {
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+  font-size: 12px;
+  color: #888;
+  text-align: center; }
+
+@media (max-width: 991px) {
+  html, body {
+    font-size: 14px; }
+  .blog-news-box .post-thumb {
+    width: calc(40% - 10px); }
+  .blog-news-box .post-info {
+    width: calc(60% - 10px); } }
+
+@media (max-width: 576px) {
+  .blog-news-box .item {
+    display: block;
+    padding: 1rem 0px;
+    border-bottom: 1px solid #eee; }
+  .blog-news-box .post-thumb {
+    width: 100%;
+    margin-bottom: 1rem; }
+  .blog-news-box .post-info {
+    width: 100%; }
+  .similar-post .list-news {
+    display: block; }
+    .similar-post .list-news .item {
+      width: 100%;
+      margin-bottom: 2rem; }
+  .list-comments .avatar img {
+    width: 32px;
+    height: 32px; } }

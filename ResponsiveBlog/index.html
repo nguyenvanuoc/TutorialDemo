@@ -1,0 +1,124 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blog</title>
+    <!-- Font google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <!-- My Style -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="nav-toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <div class="overlay-common">
+
+    </div>
+    <!-- Menu box -->
+    <nav class="menu-box">
+        <div class="close">
+            <i class="las la-times"></i>
+        </div>
+        <ul class="menus">
+            <li class="active"><a href="#">Menu 1</a></li>
+            <li><a href="#">Menu 2</a></li>
+            <li><a href="#">Menu 3</a></li>
+            <li><a href="#">Menu 4</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <header class="header">
+            
+            <a class="logo" href="index.html">
+                BlogX
+            </a>
+        </header>
+        <div class="blog-news-box">
+            <div class="item">
+                <a href="detail.html" class="post-thumb">
+                    <img src="uploads/img1.png" alt="">
+                </a>
+                <div class="post-info">
+                    <h2 class="post-title"><a href="detail.html"> How to be more productive?</a></h2>
+                    <div class="post-date">19 May 2021, 3 comments</div>
+                    <div class="post-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat ..
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <a href="detail.html" class="post-thumb">
+                    <img src="uploads/img2.png" alt="">
+                </a>
+                <div class="post-info">
+                    <h2 class="post-title"><a href="detail.html">Do these every single day and you will become a more creative person</a></h2>
+                    <div class="post-date">19 May 2021, 3 comments</div>
+                    <div class="post-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat ..
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <a href="detail.html" class="post-thumb">
+                    <img src="uploads/img3.png" alt="">
+                </a>
+                <div class="post-info">
+                    <h2 class="post-title"><a href="#">Destinations you want to visit</a></h2>
+                    <div class="post-date">19 May 2021, 3 comments</div>
+                    <div class="post-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat ..
+                    </div>
+                </div>
+            </div>
+            <div class="post-actions">
+                <a href="#" class="btn btn-readmore">Readmore...</a>
+            </div>
+            
+        </div>
+        <div class="footer-social">
+            <a href="#">
+                <i class="lab la-facebook-square"></i>
+            </a>
+            <a href="#">
+                <i class="lab la-linkedin"></i>
+            </a>
+            <a href="#">
+                <i class="lab la-twitter-square"></i>
+            </a>
+            <a href="#">
+                <i class="lab la-instagram"></i>
+            </a>
+            <a href="#">
+                <i class="lab la-whatsapp"></i>
+            </a>
+        </div>
+    </div>
+    <!-- Show Menu Box -->
+    <script>
+        $(".nav-toggle").click(function(){
+            $(".menu-box").toggleClass("show");
+            $(".overlay-common").addClass("show");
+        });
+        $(".overlay-common, .menu-box .close").click(function(){
+            $(".menu-box").removeClass("show");
+            $(".overlay-common").removeClass("show");
+        });
+    </script>
+</body>
+</html>

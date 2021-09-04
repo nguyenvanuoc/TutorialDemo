@@ -1,0 +1,155 @@
+//Var
+$main:#324869;
+$second:#3D828B;
+$title:#0B0914;
+$text:#35353F;
+$textD:#A9A9AA;
+
+
+$font-size-lg:1.222rem;
+$font-size-xl:1.7778rem;
+
+
+//Reset Default
+
+
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body,html{
+    font-size: 18px;
+    color: $text;
+    line-height: 1.44444;
+    font-family: "Inter",-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+//Style Pricing wrapper
+
+.box-pricing-wrap{
+    padding: 2rem;
+
+}
+
+.box-pricing{
+    max-width: 991px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+        
+}
+.pricing-item{
+    width: calc(33.333% - 1rem);
+    background: #fff;
+    box-shadow: 0px 1px 10px rgba(#000,0.1);
+    border-radius: 1.11111rem;
+    padding: 1.2222rem;
+    &.-mid{
+        .pricing-button{
+            margin-top: 7.66667rem;
+        }
+    }
+    &.-main{
+        background: $main;
+        color: #fff;
+        img{
+            width: 100%;
+            height: 180px;
+            object-fit: contain;
+        }
+        .pricing-subtitle{
+            margin-bottom: 0.5rem;
+        }
+        .next{
+            display: block;
+            margin-top: 1.5rem;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            font-size: $font-size-xl;
+            cursor: pointer;
+            transition: transform 0.1s ease;
+            &:hover{
+                transition: transform 0.1s ease;
+                transform: scale(1.1);
+                
+            }
+        }
+    }
+}
+.pricing-title{
+    font-size: $font-size-xl;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+.pricing-note{
+    font-size: $font-size-lg;
+    color: $textD;
+    margin-bottom: 1rem;
+
+}
+.pricing-feature{
+    margin-bottom: 0.66667rem;
+    padding-bottom: 0.66667rem;
+    border-bottom: 1px dashed $textD;
+    .li{
+        padding-bottom: .5rem;
+        display: flex;
+
+    }
+    .text{
+        flex: 1;
+        margin-left: 0.5rem;
+    }
+}
+
+.pricing-button{
+    width: 100%;
+    text-decoration: none;
+    background: $second;
+    color: #fff;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    border-radius: 0.66667rem;
+    margin-top: 2rem;
+    padding: 1rem 1rem;
+    font-size: $font-size-lg;
+    transition: background-color 0.2s ease;
+    &:hover{
+        transition: background-color 0.2s ease;
+        background: $main;
+    }
+}
+.pricing-price{
+    margin-top: 1rem;
+    .number{
+        font-size: $font-size-xl;
+        font-weight: bold;
+        
+    }
+}
+
+
+//Responsive
+
+//Screen <= 1320px
+@media(max-width:1320px){
+    html,body{
+        font-size: 14px;
+    }
+}   
+
+//screen<=768px
+@media(max-width:768px){
+    .box-pricing{
+       display: block;
+    }
+    .pricing-item{
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}   

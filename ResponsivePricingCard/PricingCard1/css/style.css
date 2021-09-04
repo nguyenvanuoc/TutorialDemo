@@ -1,0 +1,118 @@
+/*var*/
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px; }
+
+body, html {
+  font-family: "Inter",'Arial';
+  font-size: 18px;
+  color: #0B0914; }
+
+.box-pricing-wrapper {
+  padding: 1rem; }
+
+/*box-pricing*/
+.box-pricing {
+  max-width: 991px;
+  margin: 40px auto;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+  display: flex; }
+  .box-pricing .item {
+    width: 33.333%;
+    padding: 1rem;
+    height: auto; }
+    .box-pricing .item.-premium {
+      padding: 0px; }
+      .box-pricing .item.-premium .inner {
+        margin-top: -2.222rem;
+        background: #001662;
+        color: #fff;
+        border-radius: 20px;
+        padding: 1rem; }
+      .box-pricing .item.-premium .pricing-desc {
+        color: rgba(255, 255, 255, 0.5); }
+      .box-pricing .item.-premium .pricing-feature .li {
+        color: #fff; }
+      .box-pricing .item.-premium .pricing-price {
+        margin-top: 4rem; }
+      .box-pricing .item.-premium .pricing-btn {
+        background: #FF1D89;
+        box-shadow: 0px 12px 32px rgba(255, 29, 137, 0.5);
+        border-radius: 12px;
+        color: #fff;
+        transition: all 0.1s ease; }
+        .box-pricing .item.-premium .pricing-btn:hover {
+          color: #001662;
+          background: #fff; }
+    .box-pricing .item.-free .pricing-note {
+      margin-top: 7.4444rem; }
+
+.pricing-title {
+  font-size: 1.77778rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem; }
+
+.pricing-desc {
+  color: #A9A9AA;
+  margin-bottom: 1.5rem; }
+
+.pricing-feature .li {
+  margin-bottom: 1rem;
+  display: flex;
+  color: #35353F; }
+  .pricing-feature .li .text {
+    flex: 1;
+    margin-left: 10px; }
+
+.divider-dashed {
+  height: 1px;
+  margin: 1rem 0px;
+  border-top: 1px dashed #A9A9AA; }
+
+.pricing-note {
+  font-size: 1.77778rem;
+  margin-bottom: 10px;
+  font-weight: bold; }
+
+.pricing-btn {
+  width: 100%;
+  font-size: 1.222rem;
+  padding: 0.8rem 1rem;
+  text-align: center;
+  font-weight: 600;
+  display: block;
+  margin-top: 1rem;
+  text-decoration: none;
+  background: #FFF5FA;
+  color: #FF1D89;
+  border-radius: 0.667rem; }
+  .pricing-btn:hover {
+    background: #001662;
+    color: #fff; }
+
+.pricing-price .number {
+  font-size: 1.77778rem;
+  font-weight: bold; }
+
+/*Responsive*/
+@media (max-width: 1600px) {
+  html, body {
+    font-size: 14px; } }
+
+@media (max-width: 768px) {
+  .box-pricing-wrapper {
+    overflow: auto; }
+  .box-pricing {
+    display: block; }
+    .box-pricing .item {
+      width: 100%;
+      margin-bottom: 1rem;
+      padding-bottom: 1rem; }
+      .box-pricing .item.-premium .inner {
+        margin-top: 0px; }
+      .box-pricing .item.-free .pricing-note {
+        margin-top: 1rem; } }
