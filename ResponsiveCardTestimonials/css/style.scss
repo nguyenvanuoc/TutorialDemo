@@ -1,0 +1,149 @@
+//Var
+
+$main:#2A4EAA;
+$second:#006B76;
+$third:#F8593B;
+$text:#081F32;
+$textD:#6E798C;
+$border:#EBECED;
+
+
+//reset
+
+*{
+    box-sizing: border-box;
+
+}
+
+
+
+body,html{
+    font-size: 16px;
+    padding: 0px;
+    margin: 0px;
+    color: $text;
+
+    font-family: "Open Sans", sans-serif;
+}
+
+.box-wrapper{
+    max-width: 991px;
+    padding: 20px;
+    margin: auto;
+}
+
+.box-row{
+    display: flex;
+    justify-content: space-between;
+    .box-col{
+        width: calc(50% - 15px);
+
+    }
+}
+
+//Custom divider
+.divider{
+    border-top: 1px solid $border;
+    margin: 2rem 0px;
+}
+
+
+.testimonial-item{
+    display: flex;
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition:  box-shadow 0.3s ease;
+    &:hover{
+        box-shadow: 0px 24px 64px rgba(0, 0, 0, 0.04);
+    }
+    .content{
+        flex: 1;
+    
+    }
+    .avatar{
+        margin-left: 1rem;
+        img{
+            width: 7rem;
+            height: 7rem;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+    .quote{
+        font-size: 5rem;
+        height: 40px;
+        line-height: 60px;
+        font-family: 'DM Serif Display', serif;
+        &.no1{
+            color: $main;
+        }
+        &.no2{
+            color: $second;
+        }
+        &.no3{
+            color: $third;
+        }
+    }
+    .mess{
+        color: $textD;
+        line-height: 1.5rem;
+    }
+    .username{
+        font-family: 'DM Serif Display', serif;
+        font-size: 1.5rem;
+        margin-top: 1rem;
+    }
+    &.grid{
+        display: block;
+        .user{
+            display: flex;
+            align-items: center;
+            margin-top: 1rem;
+        }
+        .username{
+            margin: 0px;
+            margin-bottom: 0.2rem;
+        }
+        .info{
+            margin-left: 1rem;
+            flex: 1;
+        }
+        .avatar{
+            img{
+                width: 3rem;
+                height: 3rem;
+            }
+
+        }
+        .pos{
+            font-size: 0.75rem;
+            color: $textD;
+        }
+        .quote{
+            font-size:8rem;
+        }
+        .mess{
+            font-size: 1.125rem;
+        }
+    }
+    
+}
+
+/*Responsive*/
+// Screen < 768
+
+@media(max-width:768px){
+    html,body{
+        font-size: 14px;
+    }
+    .box-row{
+        display: block;
+        .box-col{
+            width: 100%;
+        }
+    }
+    .testimonial-item{
+        padding: 1rem;
+    }
+}

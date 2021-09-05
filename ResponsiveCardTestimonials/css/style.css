@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box; }
+
+body, html {
+  font-size: 16px;
+  padding: 0px;
+  margin: 0px;
+  color: #081F32;
+  font-family: "Open Sans", sans-serif; }
+
+.box-wrapper {
+  max-width: 991px;
+  padding: 20px;
+  margin: auto; }
+
+.box-row {
+  display: flex;
+  justify-content: space-between; }
+  .box-row .box-col {
+    width: calc(50% - 15px); }
+
+.divider {
+  border-top: 1px solid #EBECED;
+  margin: 2rem 0px; }
+
+.testimonial-item {
+  display: flex;
+  margin-bottom: 3rem;
+  padding: 1.5rem;
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease; }
+  .testimonial-item:hover {
+    box-shadow: 0px 24px 64px rgba(0, 0, 0, 0.04); }
+  .testimonial-item .content {
+    flex: 1; }
+  .testimonial-item .avatar {
+    margin-left: 1rem; }
+    .testimonial-item .avatar img {
+      width: 7rem;
+      height: 7rem;
+      border-radius: 50%;
+      object-fit: cover; }
+  .testimonial-item .quote {
+    font-size: 5rem;
+    height: 40px;
+    line-height: 60px;
+    font-family: 'DM Serif Display', serif; }
+    .testimonial-item .quote.no1 {
+      color: #2A4EAA; }
+    .testimonial-item .quote.no2 {
+      color: #006B76; }
+    .testimonial-item .quote.no3 {
+      color: #F8593B; }
+  .testimonial-item .mess {
+    color: #6E798C;
+    line-height: 1.5rem; }
+  .testimonial-item .username {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.5rem;
+    margin-top: 1rem; }
+  .testimonial-item.grid {
+    display: block; }
+    .testimonial-item.grid .user {
+      display: flex;
+      align-items: center;
+      margin-top: 1rem; }
+    .testimonial-item.grid .username {
+      margin: 0px;
+      margin-bottom: 0.2rem; }
+    .testimonial-item.grid .info {
+      margin-left: 1rem;
+      flex: 1; }
+    .testimonial-item.grid .avatar img {
+      width: 3rem;
+      height: 3rem; }
+    .testimonial-item.grid .pos {
+      font-size: 0.75rem;
+      color: #6E798C; }
+    .testimonial-item.grid .quote {
+      font-size: 8rem; }
+    .testimonial-item.grid .mess {
+      font-size: 1.125rem; }
+
+/*Responsive*/
+@media (max-width: 768px) {
+  html, body {
+    font-size: 14px; }
+  .box-row {
+    display: block; }
+    .box-row .box-col {
+      width: 100%; }
+  .testimonial-item {
+    padding: 1rem; } }
