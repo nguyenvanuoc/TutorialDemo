@@ -1,0 +1,263 @@
+body, html {
+  font-size: 14px;
+  background-color: #F7FAFC;
+  color: #4A5568;
+  font-family: "Roboto", sans-serif; }
+
+.btn-main {
+  background-color: #2F80ED;
+  color: #fff;
+  border-color: #2F80ED; }
+  .btn-main:hover {
+    background-color: #15144E;
+    color: #fff;
+    border-color: #15144E; }
+
+/*sidebar*/
+.sidebar {
+  width: 260px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  z-index: 100;
+  background-color: #15144E;
+  color: #fff;
+  padding: 2rem 0px;
+  padding-bottom: 3rem; }
+  .sidebar .logo {
+    display: block;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.5rem; }
+    .sidebar .logo img {
+      width: 34px;
+      height: 34px;
+      object-fit: contain; }
+  .sidebar .menus-box {
+    margin: 1rem 0px; }
+  .sidebar .menus {
+    list-style: none;
+    padding: 0px;
+    margin: 0px; }
+    .sidebar .menus a {
+      display: block;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none; }
+      .sidebar .menus a:hover {
+        background-color: rgba(255, 255, 255, 0.1); }
+    .sidebar .menus .icon {
+      font-size: 1.25rem;
+      margin-right: 10px; }
+    .sidebar .menus li.active > a, .sidebar .menus a.active {
+      position: relative; }
+      .sidebar .menus li.active > a:before, .sidebar .menus a.active:before {
+        content: "";
+        position: absolute;
+        width: 4px;
+        top: 0px;
+        bottom: 0px;
+        right: 0px;
+        background-color: #F2994A;
+        border-radius: 20px; }
+  .sidebar .footer {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: rgba(0, 0, 0, 0.2); }
+    .sidebar .footer .btn-logout {
+      display: block;
+      padding: 0.75rem 1.5rem;
+      color: #fff;
+      text-decoration: none; }
+      .sidebar .footer .btn-logout:hover {
+        background-color: rgba(255, 255, 255, 0.1); }
+
+.main-wrapper {
+  position: absolute;
+  top: 0px;
+  left: 260px;
+  right: 0px;
+  bottom: 0px;
+  overflow: auto; }
+
+.top-navigation {
+  background-color: #fff;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  height: 60px; }
+  .top-navigation .box-search {
+    position: relative;
+    width: 300px; }
+    .top-navigation .box-search .form-control {
+      padding-left: 30px; }
+    .top-navigation .box-search .icon {
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      position: absolute;
+      top: 0px;
+      bottom: 0px;
+      left: 5px;
+      margin: auto;
+      color: #718096; }
+  .top-navigation .menu-right {
+    white-space: nowrap; }
+    .top-navigation .menu-right .item {
+      display: inline-block;
+      margin-left: 1rem;
+      vertical-align: middle; }
+      .top-navigation .menu-right .item.-notify {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        position: relative; }
+        .top-navigation .menu-right .item.-notify .icon {
+          font-size: 1.75rem;
+          color: #718096; }
+        .top-navigation .menu-right .item.-notify .dot {
+          width: 10px;
+          height: 10px;
+          top: 0px;
+          right: 5px;
+          background-color: #F2994A;
+          border-radius: 50%;
+          display: block;
+          position: absolute; }
+    .top-navigation .menu-right .avatar img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      object-fit: cover; }
+    .top-navigation .menu-right .dropdown-user a {
+      display: block;
+      padding: 0.5rem 1rem;
+      color: #4A5568;
+      text-decoration: none; }
+      .top-navigation .menu-right .dropdown-user a:hover {
+        background-color: #F7FAFC; }
+
+.page-content {
+  position: absolute;
+  top: 60px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  padding: 1.5rem;
+  overflow: auto; }
+
+.main-title {
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0px;
+  margin-bottom: 1rem; }
+
+.box-form {
+  background-color: #fff; }
+
+.form-head {
+  padding: 1rem 1rem;
+  display: flex;
+  justify-content: space-between; }
+  .form-head .form-title {
+    font-size: 1.25rem; }
+
+.table-content {
+  overflow: auto; }
+
+.table-result {
+  width: 100%;
+  white-space: nowrap; }
+  .table-result th {
+    background-color: #EDF2F7;
+    font-weight: normal; }
+  .table-result th, .table-result td {
+    padding: 0.75rem 1rem; }
+  .table-result td {
+    border-bottom: 1px solid #E2E8F0;
+    color: #718096; }
+  .table-result a.btn {
+    color: #2F80ED; }
+
+.pagination-bottom {
+  display: flex;
+  padding: 0.75rem 1rem;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .pagination-bottom .page-item {
+    margin: 0px 5px; }
+  .pagination-bottom .page-link {
+    background: none;
+    color: #4A5568;
+    border: 0px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    line-height: 30px;
+    text-align: center;
+    padding: 0px; }
+    .pagination-bottom .page-link:hover {
+      background: #F7FAFC;
+      color: #2F80ED; }
+  .pagination-bottom .btn-size {
+    border: 1px solid #E2E8F0;
+    color: #718096;
+    white-space: nowrap; }
+
+.nav-toggle {
+  width: 32px;
+  height: 32px;
+  left: 0px;
+  background: #2F80ED;
+  color: #fff;
+  line-height: 32px;
+  position: absolute;
+  z-index: 10;
+  display: none;
+  top: 12px;
+  left: 10px;
+  border-radius: 2px;
+  text-align: center;
+  cursor: pointer; }
+  .nav-toggle span {
+    line-height: 32px; }
+  .nav-toggle:hover {
+    background: #15144E; }
+
+.overlay-common {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 99;
+  background: rgba(0, 0, 0, 0.2);
+  display: none; }
+  .overlay-common.show {
+    display: block; }
+
+/*Responsive*/
+@media (max-width: 991px) {
+  .nav-toggle {
+    display: block; }
+  .sidebar {
+    left: -100%;
+    transition: all 0.3s ease;
+    visibility: hidden;
+    opacity: 0; }
+    .sidebar.show {
+      left: 0%;
+      transition: all 0.3s ease;
+      visibility: visible;
+      opacity: 1; }
+  .main-wrapper {
+    left: 0px; }
+  .top-navigation {
+    padding-left: 50px; } }
