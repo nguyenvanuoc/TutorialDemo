@@ -1,0 +1,286 @@
+/*Var*/
+$main:#2F80ED;
+$border-base:6px;
+$textD:#697386;
+$text:#000;
+$text-dark:#1A1F36;
+$border:#e0e0e0;
+// reset
+
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+
+
+}
+
+html,body{
+    font-size: 14px;
+    height: 100%;
+    font-family: "Roboto",sans-serif;
+
+}
+.form-control{
+    border: 1px solid $border;
+    width: 100%;
+    padding: 0.5rem 10px;
+    border-radius: $border-base;
+    outline:0px;
+    transition: border-color 0.3s ease;
+    color: $textD;
+    height: 34px;
+    font-size: 1rem;
+    background-color: #fff;
+    &:focus{
+        transition: border-color 0.3s ease;
+        border-color: $main;
+    }
+}
+//Custom select default
+
+
+.select-custom{
+    position: relative;
+    &:before{
+        content: "\e10f";
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        bottom: 0px;
+        margin: auto;
+        font-family: "ap";
+        pointer-events: none;
+    }
+    .form-control{  
+        -webkit-appearance: none;
+        appearance: none;
+        padding-right: 20px;
+        color: #000;
+    }
+}
+.label-text{
+    margin-bottom: 0.5rem;
+    color: $textD;
+
+}
+.form-group{
+    margin-bottom: 2rem;
+}
+.box-checkout-wrapper{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    .box-col{
+        padding: 2rem;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .content{
+        max-width: 400px;
+        margin: auto;
+    }
+}
+.box-product-info{
+    .logo{
+        display: block;
+        margin-bottom: 2rem;
+        img{
+            width: 48px;
+        }
+    }
+    .back{
+        display: block;
+        color: $text-dark;
+        text-decoration: none;
+        font-weight: 500;
+        margin-bottom: 3rem;
+        &:hover{
+            color: $main;
+        }
+    }
+    .pricing-box{
+        margin-bottom: 1rem;
+        .name{
+            color: $textD;
+            margin-bottom: 0.5rem;
+        }
+        .price{
+            font-size: 2rem;
+            font-weight: 500;
+        }
+    }
+    .product-image{
+        max-width: 320px;
+        img{
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+}
+.box-product-payment{
+    background-color: #fff;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.08);
+    .btn-apple-pay{
+        background-color: $text;
+        display: block;
+        border-radius: $border-base;
+        margin-bottom: 2rem;
+        padding: 0.5rem 2rem;
+        text-align: center;
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+    .or{
+        position: relative;
+        margin-bottom: 2rem;
+        text-align: center;
+        color: $textD;
+        &:before{
+            height: 1px;
+            bottom: 0px;
+            content: "";
+            top: 0px;
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            margin: auto;
+            background-color: $border;
+        }
+        span{
+            position: relative;
+            background-color: #fff;
+            z-index: 1;
+            padding: 5px;
+        }
+    }
+    .form-card{
+        height: auto;
+        padding: 0px;
+        .form-control{
+            border:0px;
+        }
+        .top{
+            display: flex;
+            border-bottom: 1px solid $border;
+            .form-control{
+                flex: 1;
+            }
+            .typecard{
+                white-space: nowrap;
+                padding: 0.5rem;
+                .icon{
+                    display: inline-block;
+                }
+                img{
+                    height: 16px;
+
+                }
+            }
+        }
+        .bottom{
+            display: flex;
+            .date{
+                flex: 1;
+            }
+            .cvc{
+                width: 50%;
+                display: flex;
+                border-left: 1px solid $border;
+                align-items: center;
+            }
+            .icon{
+                padding: 0.5rem;
+            }
+        }
+
+    }
+    .form-country{
+        border: 1px solid $border;
+        border-radius: $border-base;
+        overflow: hidden;
+        .form-control{
+            border-radius: 0px;
+            border: 0px;
+        }
+        .select-custom{
+            border-bottom: 1px solid $border;
+        }
+    }
+
+    .actions{
+        .btn{
+            width: 100%;
+            padding: 0.75rem 2rem;
+            display: block;
+            min-height: 34px;
+            border: 0px;
+            background-color: $main;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 500;
+            border-radius: $border-base;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            &:hover{
+                transition: background-color 0.2s ease;
+                background-color: $text;
+            }
+        }
+    }
+}
+
+
+
+
+.footer{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 50%;
+    text-align: center;
+    padding: 1rem;
+    color: $textD;
+    font-size: 12px;
+    .powered{
+        margin-right: 1rem;
+        display: inline-block;
+    }
+    .menus{
+        display: inline-block;
+        a{
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            color: $textD;
+            text-decoration: none;
+            &:hover{
+                color: $main;
+            }
+        }
+    }
+}
+
+
+// Responsive
+
+@media(max-width:768px){
+    .box-checkout-wrapper{
+        height: auto;
+        display: block;
+        .box-col{
+            width: 100%;
+            height: auto;
+        }
+    }
+    .footer{
+        position: relative;
+        margin-top: 2rem;
+    }
+}

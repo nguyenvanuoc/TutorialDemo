@@ -1,0 +1,116 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Checkout</title>
+    <!-- Import Font Icon -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Font Icon  -->
+    <link rel="stylesheet" href="assets/ap/style.css">
+    <!-- My Style -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="box-checkout-wrapper">
+        <div class="box-col box-product-info">
+            <div class="content">
+                <a class="logo">
+                    <img src="images/logo.svg" alt="">
+                </a>
+                <a href="#" class="back">
+                    <span class="-ap icon-arrow_back"></span> Back home
+                </a>
+                <div class="pricing-box">
+                    <div class="name">Pure set</div>
+                    <div class="price">$ 65.00</div>
+                </div>
+                <div class="product-image">
+                    <img src="uploads/img.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <div class="box-col box-product-payment">
+            <div class="content">
+                <a href="#" class="btn btn-apple-pay">
+                    <img src="images/apple-pay.svg" alt="">
+                </a>
+                <div class="or">
+                    <span>Or pay with card</span>
+                </div>
+                <div class="form-group">
+                    <div class="label-text">Email</div>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <div class="label-text">Country or region</div>
+                    <div class="form-control form-card">
+                        <div class="top">
+                            <input type="text" class="form-control">
+                            <div class="typecard">
+                                <span class="icon">
+                                    <img src="images/visa.svg" alt="">
+                                </span>
+                                <span class="icon">
+                                    <img src="images/mastercard.svg" alt="">
+                                </span>
+                                <span class="icon">
+                                    <img src="images/ae.svg" alt="">
+                                </span>
+                                <span class="icon">
+                                    <img src="images/discover.svg" alt="">
+                                </span>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <div class="date">
+                                <input type="text" class="form-control" placeholder="MM / YY">
+                            </div>
+                            <div class="cvc">
+                                <input type="text" placeholder="CVC" class="form-control">
+                                <span class="icon">
+                                    <img src="images/cvc.svg" alt="">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label-text">Name on card</div>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <div class="label-text">Country or region</div>
+                    <div class="form-country">
+                        <div class="select-custom">
+                            <select name="" id="" class="form-control">
+                                <option value="">Viet Nam</option>
+                                <option value="">US</option>
+                                <option value="">English</option>
+                                <option value="">Thai lan</option>
+                                <option value="">...</option>
+                            </select>
+                        </div>
+                        <input type="text" class="form-control" placeholder="zip">
+                    </div>
+                </div>
+                <div class="actions">
+                    <button class="btn btn-main">Pay $65.00</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <span class="powered">Powered by <img src="images/logo-drCare.svg" alt=""></span>
+            |
+            <div class="menus">
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

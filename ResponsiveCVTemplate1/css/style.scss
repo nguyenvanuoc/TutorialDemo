@@ -1,0 +1,246 @@
+//** Var 
+
+$main:#42489E;
+$text: #000000;
+$textD: #666;
+$bg:linear-gradient(180deg, #2A68A0 0%, #43479E 100%);
+
+
+// reset
+
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body,html{
+    color: $textD;
+    font-size: 16px;
+    font-family: Poppins, sans-serif;
+}
+
+
+.cv-main-wrapper{
+    display: flex;
+
+}
+.cv-main-content{
+    padding: 1.5rem;
+    flex: 1;
+    .user-top{
+        margin-bottom: 3rem;
+        display: flex;
+        .avatar{
+            
+            img{
+                width:8rem ;
+                height: 8rem;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+        .userinfo{
+            flex: 1;
+            margin-left: 2rem;
+        }
+        .top{
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            .name{
+                font-size: 2rem;
+                
+                
+            }
+            .featured{
+                font-weight: 700;
+                color: $main;
+            }
+        }
+        .li{
+            margin-bottom: 0.5rem;
+            .icon{
+                margin-right: 0.25rem;
+            }
+        }
+    }
+    .main-title{
+        margin-left: 60px;
+        .icon{
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            display: inline-block;
+            text-align: center;
+            font-size: 1.25rem;
+            line-height: 2.5rem;
+            background-color: $main;
+            color: #fff;
+            margin-right: 1rem;
+        }
+
+    }
+    .work-item{
+        display: flex;
+        margin-bottom: 2rem;
+
+        .date{
+            width: 60px;
+        }
+        .content{
+            flex: 1;
+            margin-left: 1rem;
+            position: relative;
+            padding-left: 30px;
+            .dot{
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                position: absolute;
+                top: 8px;
+                left: 0px;
+                background-color: $main;
+                &:before{
+                    content: "";
+                    position: absolute;
+                    top: -4px;
+                    right: -4px;
+                    left: -4px;
+                    bottom: -4px;
+                    background-color: #EAE7E7;
+                    border-radius: 50%;
+                    z-index: -1;
+                }
+            }
+
+        }
+        .name{
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 0.25rem;
+        }
+        .company{
+            margin-bottom: 1rem;
+            color: #9B9B9B;
+        }
+    }
+}
+.main-title{
+    font-size: 1.5rem;
+    color: $main;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+.box{
+    margin-bottom: 3rem;
+}
+.cv-main-sidebar{
+    width: 400px;
+    background:$bg;
+    color: #fff;
+    padding: 2rem;
+
+    .main-title{
+        color: #fff;
+    }
+    .quote{
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+    }
+    .list-skills{
+        border-left: 1px solid #BBB5DB;
+        .item{
+            margin-bottom: 1rem;
+            &:last-child{
+                margin-bottom: 0px;
+            }
+        }
+        .name{
+            padding-left: 1rem;
+            margin-bottom: 0.25rem;
+        }
+        .progress{
+            position: relative;
+            height: 0.75rem;
+            background-color: #877DBA;
+            .bar{
+                position: absolute;
+                top: 0px;
+                bottom: 0px;
+                left: 0px;
+                background-color: #BBB5DB;
+            }
+
+        }
+    }
+    .list-personal-skill{
+        .item{
+            margin-bottom: 1rem;
+            &:last-child{
+                margin-bottom: 0px;
+            }
+        }
+        .name{
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        .rate{
+           .dot{
+               width: 0.75rem;
+               height: 0.75rem;
+               margin-right: 5px;
+               display: inline-block;
+               border-radius: 50%;
+               background-color: rgba(#fff,0.5);
+               &.active{
+                   background-color: #fff;
+               }
+           } 
+        }
+    }
+    .list-social{
+        a{
+            display: flex;
+            padding: 0.5rem;
+            margin-bottom: 0.75rem;
+            color: #fff;
+            text-decoration: none;
+            align-items: center;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+        .icon{
+            font-size: 1.25rem;
+            width: 2rem;
+        }
+    }
+}
+
+
+
+//** Responsive
+
+// Screen >= 1366px
+@media(min-width:1366px){
+    body,html{
+        font-size: 18px;
+    }
+}
+// Screen <= 768px
+
+@media(max-width:768px){
+    body,html{
+        font-size: 14px;
+    }
+    .cv-main-wrapper{
+        display: block;
+        .main-title{
+            margin-left: 0px;
+        }
+    }
+    .cv-main-sidebar{
+        width: 100%;
+    }
+}
+

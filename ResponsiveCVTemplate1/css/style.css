@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px; }
+
+body, html {
+  color: #666;
+  font-size: 16px;
+  font-family: Poppins, sans-serif; }
+
+.cv-main-wrapper {
+  display: flex; }
+
+.cv-main-content {
+  padding: 1.5rem;
+  flex: 1; }
+  .cv-main-content .user-top {
+    margin-bottom: 3rem;
+    display: flex; }
+    .cv-main-content .user-top .avatar img {
+      width: 8rem;
+      height: 8rem;
+      border-radius: 50%;
+      object-fit: cover; }
+    .cv-main-content .user-top .userinfo {
+      flex: 1;
+      margin-left: 2rem; }
+    .cv-main-content .user-top .top {
+      margin-bottom: 1rem;
+      text-transform: uppercase; }
+      .cv-main-content .user-top .top .name {
+        font-size: 2rem; }
+      .cv-main-content .user-top .top .featured {
+        font-weight: 700;
+        color: #42489E; }
+    .cv-main-content .user-top .li {
+      margin-bottom: 0.5rem; }
+      .cv-main-content .user-top .li .icon {
+        margin-right: 0.25rem; }
+  .cv-main-content .main-title {
+    margin-left: 60px; }
+    .cv-main-content .main-title .icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      display: inline-block;
+      text-align: center;
+      font-size: 1.25rem;
+      line-height: 2.5rem;
+      background-color: #42489E;
+      color: #fff;
+      margin-right: 1rem; }
+  .cv-main-content .work-item {
+    display: flex;
+    margin-bottom: 2rem; }
+    .cv-main-content .work-item .date {
+      width: 60px; }
+    .cv-main-content .work-item .content {
+      flex: 1;
+      margin-left: 1rem;
+      position: relative;
+      padding-left: 30px; }
+      .cv-main-content .work-item .content .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        position: absolute;
+        top: 8px;
+        left: 0px;
+        background-color: #42489E; }
+        .cv-main-content .work-item .content .dot:before {
+          content: "";
+          position: absolute;
+          top: -4px;
+          right: -4px;
+          left: -4px;
+          bottom: -4px;
+          background-color: #EAE7E7;
+          border-radius: 50%;
+          z-index: -1; }
+    .cv-main-content .work-item .name {
+      font-weight: bold;
+      color: #000;
+      margin-bottom: 0.25rem; }
+    .cv-main-content .work-item .company {
+      margin-bottom: 1rem;
+      color: #9B9B9B; }
+
+.main-title {
+  font-size: 1.5rem;
+  color: #42489E;
+  margin-bottom: 1.5rem;
+  font-weight: bold; }
+
+.box {
+  margin-bottom: 3rem; }
+
+.cv-main-sidebar {
+  width: 400px;
+  background: linear-gradient(180deg, #2A68A0 0%, #43479E 100%);
+  color: #fff;
+  padding: 2rem; }
+  .cv-main-sidebar .main-title {
+    color: #fff; }
+  .cv-main-sidebar .quote {
+    font-size: 3rem;
+    margin-bottom: 0.5rem; }
+  .cv-main-sidebar .list-skills {
+    border-left: 1px solid #BBB5DB; }
+    .cv-main-sidebar .list-skills .item {
+      margin-bottom: 1rem; }
+      .cv-main-sidebar .list-skills .item:last-child {
+        margin-bottom: 0px; }
+    .cv-main-sidebar .list-skills .name {
+      padding-left: 1rem;
+      margin-bottom: 0.25rem; }
+    .cv-main-sidebar .list-skills .progress {
+      position: relative;
+      height: 0.75rem;
+      background-color: #877DBA; }
+      .cv-main-sidebar .list-skills .progress .bar {
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        background-color: #BBB5DB; }
+  .cv-main-sidebar .list-personal-skill .item {
+    margin-bottom: 1rem; }
+    .cv-main-sidebar .list-personal-skill .item:last-child {
+      margin-bottom: 0px; }
+  .cv-main-sidebar .list-personal-skill .name {
+    margin-bottom: 0.5rem;
+    display: block; }
+  .cv-main-sidebar .list-personal-skill .rate .dot {
+    width: 0.75rem;
+    height: 0.75rem;
+    margin-right: 5px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5); }
+    .cv-main-sidebar .list-personal-skill .rate .dot.active {
+      background-color: #fff; }
+  .cv-main-sidebar .list-social a {
+    display: flex;
+    padding: 0.5rem;
+    margin-bottom: 0.75rem;
+    color: #fff;
+    text-decoration: none;
+    align-items: center; }
+    .cv-main-sidebar .list-social a:hover {
+      text-decoration: underline; }
+  .cv-main-sidebar .list-social .icon {
+    font-size: 1.25rem;
+    width: 2rem; }
+
+@media (min-width: 1366px) {
+  body, html {
+    font-size: 18px; } }
+
+@media (max-width: 768px) {
+  body, html {
+    font-size: 14px; }
+  .cv-main-wrapper {
+    display: block; }
+    .cv-main-wrapper .main-title {
+      margin-left: 0px; }
+  .cv-main-sidebar {
+    width: 100%; } }

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VNPT Smart CA</title>
+    <script src="assets/jquery/jquery-3.6.0.min.js"></script>
+    <script src="assets/jquery/popper.min.js"></script>
+    <!-- Bootstrap 4 -->
+
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/slick/slick.min.js"></script>
+
+    
+    <!-- Slick slider -->
+    <link rel="stylesheet" href="assets/slick/slick.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/ca-icon/style.css">
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="assets/ap8/css/style.css">
+    <!-- My icon -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="shortcut icon" href="images/favico.png" type="image/x-icon">
+</head>
+<body>
+    <div class="box-login-wrapper">
+        <div class="box-slider-image box-col" style="background-image: url(images/bg.png);">
+            <div class="box-slider">
+                <div class="slider-image">
+                    <div class="item">
+                        <img src="images/screen.png" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="images/screen.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box-form box-col -register">
+            <div class="box-inner">
+                <div class="logo">
+                    <img src="images/logo.svg" alt="">
+                </div>
+                <h1 class="main-title">Đăng ký tài khoản</h1>
+                <div class="form-group">
+                    <div class="label-text">Họ và tên</div>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <div class="label-text">Email</div>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <div class="label-text">Số điện thoại</div>
+                    <input type="text" class="form-control">
+                </div>
+                
+                
+                <div class="form-group">
+                    <div class="label-text">Mật khẩu</div>
+                    <div class="input-icon-right">
+                        <input type="password" class="form-control">
+                        <span class="icon -ap icon-eye"></span>
+                    </div>
+                    
+                </div>
+                <div class="form-group">
+                    <div class="label-text">Xác nhận mật khẩu</div>
+                    <div class="input-icon-right">
+                        <input type="password" class="form-control">
+                        <span class="icon -ap icon-eye"></span>
+                    </div>
+                    
+                </div>
+                <div class="form-bottom">
+                    <div class="check-action">
+                        <input type="checkbox" class="check">
+                        <span class="name">Tôi đồng ý với các</span>
+                    </div>
+                    <a href="#" class="link"> điều khoản sử dụng</a>
+                </div>
+                <div class="actions">
+                    <button class="btn btn-main">Đăng nhập</button>
+
+                </div>
+                <div class="register-box">
+                    Đã có tài khoản? <a href="#" class="link">Đăng nhập</a>
+                </div>
+                <div class="openid">
+                    <div class="or"><span>    Hoặc</span></div>
+                    <button class="btn btn-google">
+                        <span class="icon">
+                            <img src="images/logo-google.png" alt="">
+                        </span>
+                        <span class="text">Đăng ký qua Google</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <Script>
+        $('.slider-image').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            arrows:false
+        });
+    </Script>
+</body>
+</html>
