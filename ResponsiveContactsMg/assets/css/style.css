@@ -1,0 +1,238 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px; }
+
+body, html {
+  font-family: "Lato";
+  font-size: 14px;
+  color: #1A1C1D;
+  height: 100%;
+  overflow: hidden; }
+
+.wrapper-canvas {
+  display: flex;
+  height: 100%; }
+
+.sidebar {
+  width: 84px;
+  background-color: #fff;
+  padding: 0.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #ECEEF5; }
+  .sidebar .logo {
+    margin-bottom: 20px; }
+  .sidebar .menus {
+    display: flex;
+    height: 100%;
+    align-content: center;
+    overflow: auto;
+    flex-wrap: wrap;
+    justify-content: center; }
+    .sidebar .menus a {
+      display: block;
+      width: 40px;
+      height: 40px;
+      margin: 1rem 0px;
+      border-radius: 8px;
+      border: 1px solid transparent;
+      line-height: 40px;
+      color: #8083A3;
+      position: relative; }
+      .sidebar .menus a .dot {
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        top: -2px;
+        right: -2px;
+        background-color: #28C345;
+        border-radius: 50%; }
+      .sidebar .menus a span {
+        line-height: 40px;
+        font-size: 22px; }
+      .sidebar .menus a:hover {
+        color: #1A1C1D; }
+      .sidebar .menus a.active {
+        border-color: #ECEEF5;
+        color: #6B59CC; }
+
+.avatar img {
+  width: 36p;
+  height: 36px;
+  border-radius: 8px;
+  object-fit: cover; }
+
+.sidebar-list-contacts {
+  width: 550px;
+  display: flex;
+  flex-direction: column;
+  background-color: #FAF9FF;
+  border-right: 1px solid #ECEEF5; }
+  .sidebar-list-contacts .top {
+    height: 84px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+    align-items: center;
+    border-bottom: 1px solid #ECEEF5; }
+    .sidebar-list-contacts .top .title {
+      flex: 1;
+      font-size: 20px;
+      font-weight: bold;
+      margin: 0px 10px; }
+    .sidebar-list-contacts .top .navigation .btn {
+      margin: 0px 3px; }
+  .sidebar-list-contacts .body {
+    padding: 2rem;
+    height: 100%;
+    overflow: auto; }
+  .sidebar-list-contacts .search {
+    margin-bottom: 1rem; }
+    .sidebar-list-contacts .search .label-text {
+      color: #8083A3;
+      margin-bottom: 2px; }
+    .sidebar-list-contacts .search .form-control {
+      border: 0px;
+      width: 100%;
+      padding: 5px 0px;
+      font-size: 16px;
+      flex: 1;
+      outline: 0px;
+      background-color: transparent; }
+      .sidebar-list-contacts .search .form-control::placeholder {
+        color: #1A1C1D; }
+    .sidebar-list-contacts .search .input-search {
+      display: flex; }
+    .sidebar-list-contacts .search .btn-search {
+      background-color: transparent;
+      border: 0px;
+      font-size: 18px; }
+
+.list-users .item {
+  display: flex;
+  margin-top: 3rem; }
+
+.list-users .text-content {
+  flex: 1;
+  margin: 0px 10px; }
+
+.list-users .avatar {
+  position: relative; }
+  .list-users .avatar .dot {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    bottom: -4px;
+    right: -4px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background-color: #28C345; }
+    .list-users .avatar .dot.-offline {
+      background-color: #F6933E; }
+
+.list-users .name {
+  font-weight: bold;
+  margin-bottom: 3px; }
+
+.list-users .pos {
+  color: #8083A3; }
+
+.list-users .actions .btn {
+  margin: 0px 3px; }
+
+img {
+  max-width: 100%; }
+
+.btn {
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  color: #8083A3;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid #ECEEF5;
+  cursor: pointer;
+  background-color: #fff; }
+  .btn:hover {
+    color: #6B59CC; }
+  .btn span {
+    line-height: 40px; }
+
+.box-info-content {
+  flex: 1;
+  min-width: 0px;
+  display: flex;
+  flex-direction: column; }
+  .box-info-content .top {
+    display: flex;
+    padding: 5px 2rem;
+    align-items: center;
+    justify-content: flex-end;
+    border-bottom: 1px solid #ECEEF5;
+    height: 84px; }
+    .box-info-content .top .item {
+      margin-left: 10px; }
+      .box-info-content .top .item:first-child {
+        border-right: 1px solid #ECEEF5;
+        padding-right: 10px; }
+  .box-info-content .body {
+    height: 100%;
+    overflow: auto;
+    padding: 2rem 2rem;
+    padding-right: 4rem; }
+  .box-info-content .info-row {
+    display: flex;
+    margin-bottom: 30px; }
+    .box-info-content .info-row .key {
+      width: 100px;
+      text-align: right;
+      color: #8083A3; }
+    .box-info-content .info-row .value {
+      flex: 1;
+      margin-left: 30px; }
+      .box-info-content .info-row .value p {
+        margin-bottom: 20px; }
+  .box-info-content .user {
+    display: flex; }
+    .box-info-content .user .text-content {
+      margin-left: 1rem; }
+    .box-info-content .user .avatar img {
+      width: 114px;
+      height: 114px;
+      border-radius: 26px; }
+    .box-info-content .user .name {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 0.5rem; }
+    .box-info-content .user .pos {
+      color: #8083A3; }
+    .box-info-content .user .actions {
+      margin-top: 20px; }
+      .box-info-content .user .actions .btn {
+        margin-right: 5px;
+        vertical-align: middle; }
+      .box-info-content .user .actions .btn-main {
+        width: auto;
+        background-color: #6B59CC;
+        color: #fff;
+        padding: 0px 10px;
+        border: 0px;
+        font-size: 16px; }
+        .box-info-content .user .actions .btn-main:hover {
+          background-color: #4d39b9; }
+        .box-info-content .user .actions .btn-main span {
+          display: inline-block;
+          vertical-align: middle; }
+  .box-info-content .social .key {
+    margin-top: 10px; }
+  .box-info-content .social .btn {
+    margin: 0px 4px; }
+  .box-info-content .label-primary {
+    padding: 5px 10px;
+    border-radius: 8px;
+    color: #8083A3;
+    background-color: #FAF9FF;
+    display: inline-block;
+    font-weight: bold; }

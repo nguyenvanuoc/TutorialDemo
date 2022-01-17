@@ -1,0 +1,318 @@
+$main:#6B59CC;
+$text:#1A1C1D;
+$textD:#8083A3;
+$borc:#ECEEF5;
+$success:#28C345;
+$warning:#F6933E;
+$bg:#FAF9FF;
+
+
+// Reset
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body,html{
+    font-family: "Lato";
+    font-size: 14px;
+    color: $text;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+
+.wrapper-canvas{
+    display: flex;
+    height: 100%;
+}
+.sidebar{
+    width: 84px;
+    background-color: #fff;
+    padding:0.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid $borc;
+    .logo{
+        margin-bottom: 20px;
+    }
+    .menus{
+        display: flex;
+        height: 100%;
+        align-content: center;
+        overflow: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        a{
+            display: block;
+            width: 40px;
+            height: 40px;
+            margin: 1rem 0px;
+            border-radius:8px;
+            border: 1px solid transparent;
+            line-height: 40px;
+            color: $textD;
+            position: relative;
+            .dot{
+                width: 8px;
+                height: 8px;
+                position: absolute;
+                top: -2px;
+                right: -2px;
+                background-color: $success;
+                border-radius: 50%;
+            }
+            span{
+                line-height: 40px;
+                
+                font-size: 22px;
+            }
+            &:hover{
+                color: $text;
+            }
+            &.active{
+                border-color: $borc;
+                color: $main;
+            }
+
+        }
+    }
+
+}
+.avatar{
+    img{
+        width: 36p;
+        height: 36px;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+}
+.sidebar-list-contacts{
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    background-color: $bg;
+    border-right: 1px solid $borc;
+    .top{
+        height: 84px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 2rem ;
+        align-items: center;
+        border-bottom: 1px solid $borc;
+        .title{
+            flex:1;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0px 10px;
+        }
+        .navigation{
+            .btn{
+                margin: 0px 3px;
+            }
+        }
+        
+    }
+    .body{
+        padding: 2rem;
+        height: 100%;
+        overflow: auto;
+    }
+    .search{
+        margin-bottom: 1rem;
+        .label-text{
+            color: $textD;
+            margin-bottom: 2px;
+        }
+        .form-control{
+            border: 0px;
+            width: 100%;
+            padding: 5px 0px;
+            font-size: 16px;
+            flex: 1;
+            outline: 0px;
+            background-color: transparent;
+            
+            &::placeholder{
+                color: $text;
+            }
+        }
+        .input-search{
+            display: flex;
+
+        }
+        .btn-search{
+            background-color: transparent;
+            border: 0px;
+            font-size: 18px;
+        }
+    }
+}
+
+.list-users{
+    .item{
+        display: flex;
+        margin-top: 3rem;
+    }
+    .text-content{
+        flex: 1;
+        margin: 0px 10px;
+    }
+    .avatar{
+        position: relative;
+        .dot{
+            width: 12px;
+            height: 12px;
+            position: absolute;
+            bottom: -4px;
+            right: -4px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            background-color: $success;
+            &.-offline{
+                background-color: $warning;
+            }
+        }
+    }
+    .name{
+        font-weight: bold;
+        margin-bottom: 3px;
+    }
+    .pos{
+        color: $textD;
+    }
+    .actions{
+        .btn{
+            margin: 0px 3px;
+        }
+    }
+}
+img{
+    max-width: 100%;
+}
+
+.btn{
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    color: $textD;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid $borc;
+    cursor: pointer;
+    background-color: #fff;
+    &:hover{
+        color: $main;
+    }
+    span{
+        line-height: 40px;
+    }
+}
+
+.box-info-content{
+    flex: 1;
+    min-width: 0px;
+    display: flex;
+    flex-direction: column;
+    .top{
+        display: flex;
+        padding: 5px 2rem;
+        align-items: center;
+        justify-content: flex-end;
+        border-bottom: 1px solid $borc;
+        height: 84px;
+        .item{
+            margin-left: 10px;
+            &:first-child{
+                border-right: 1px solid $borc;
+                padding-right: 10px;
+            }
+        }
+    }
+    .body{
+        height: 100%;
+        overflow: auto;
+        padding: 2rem 2rem;
+        padding-right: 4rem;
+    }
+    .info-row{
+        display: flex;
+        margin-bottom: 30px;
+        .key{
+            width: 100px;
+            text-align: right;
+            color: $textD;
+        }
+        .value{
+            flex: 1;
+            margin-left: 30px;
+            p{
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .user{
+        display: flex;
+        .text-content{
+            margin-left: 1rem;
+        }
+        .avatar{
+            img{
+                width: 114px;
+                height: 114px;
+                border-radius: 26px;
+            }
+        }
+        .name{
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .pos{
+            color: $textD;
+        }
+        .actions{
+            margin-top: 20px;
+            .btn{
+                margin-right: 5px;
+                vertical-align: middle;
+            }
+            .btn-main{
+                width: auto;
+                background-color: $main;
+                color: #fff;
+                padding: 0px 10px;
+                border: 0px;
+                font-size: 16px;
+                &:hover{
+                    background-color: darken($main,10);
+                }
+                span{
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+            }
+        }
+
+    }
+    .social{
+        .key{
+            margin-top: 10px;
+        }
+        .btn{
+            margin: 0px 4px;
+        }
+    }
+    .label-primary{
+        padding: 5px 10px;
+        border-radius: 8px;
+        color: $textD;
+        background-color: $bg;
+        display: inline-block;
+        font-weight: bold;
+    }
+}

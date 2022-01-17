@@ -1,0 +1,247 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px; }
+
+body, html {
+  font-size: 16px;
+  color: #29292E;
+  background-color: #F8F8F8;
+  font-family: "Roboto",sans-serif; }
+
+.btn {
+  padding: 0.91rem 1.5rem;
+  border: 1px solid #A8A8B3;
+  background-color: #fff;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer; }
+  .btn span {
+    margin-right: 5px; }
+  .btn:hover {
+    background-color: #f6f6f6; }
+  .btn.btn-main {
+    background-color: #835AFD;
+    color: #fff;
+    border-color: #835AFD; }
+    .btn.btn-main:hover {
+      background-color: #5d28fc; }
+
+.form-control {
+  height: 50px;
+  padding: 0.75rem 1rem;
+  outline: 0px;
+  border: 1px solid #A8A8B3;
+  border-radius: 0.5rem;
+  width: 100%;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  font-family: "Roboto",sans-serif; }
+  .form-control::placeholder {
+    color: #A8A8B3; }
+  .form-control:focus {
+    transition: all 0.3s ease;
+    border-color: #835AFD; }
+
+.login-wrapper {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #fff; }
+  .login-wrapper .box-col {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .login-wrapper .box-image {
+    background-color: #835AFD;
+    padding: 1rem 2rem;
+    color: #fff; }
+    .login-wrapper .box-image .inner {
+      max-width: 320px; }
+    .login-wrapper .box-image img {
+      width: 100%; }
+    .login-wrapper .box-image .title {
+      font-family: "Popins",sans-serif;
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 1rem; }
+    .login-wrapper .box-image .desc {
+      font-size: 1rem;
+      line-height: 1.5;
+      opacity: 0.7; }
+  .login-wrapper .box-form {
+    max-width: 320px;
+    margin: auto; }
+    .login-wrapper .box-form .logo {
+      text-align: center;
+      margin-bottom: 2rem;
+      display: block; }
+      .login-wrapper .box-form .logo img {
+        display: inline-block; }
+    .login-wrapper .box-form .btn {
+      width: 100%; }
+    .login-wrapper .box-form .btn-google {
+      margin-bottom: 1.5rem; }
+      .login-wrapper .box-form .btn-google:hover {
+        border-color: #835AFD; }
+      .login-wrapper .box-form .btn-google .icon {
+        display: inline-block;
+        vertical-align: middle; }
+        .login-wrapper .box-form .btn-google .icon img {
+          width: 24px;
+          height: 24px;
+          object-fit: contain; }
+    .login-wrapper .box-form .or {
+      position: relative;
+      text-align: center;
+      color: #A8A8B3;
+      margin-bottom: 1.5rem; }
+      .login-wrapper .box-form .or:before {
+        content: "";
+        height: 1px;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        bottom: 0px;
+        margin: auto;
+        position: absolute;
+        background-color: #A8A8B3; }
+      .login-wrapper .box-form .or span {
+        position: relative;
+        z-index: 2;
+        background-color: #fff;
+        padding: 0.5rem 1rem; }
+    .login-wrapper .box-form .btn-main {
+      margin-top: 1.5rem; }
+  @media (max-width: 768px) {
+    .login-wrapper .box-col {
+      width: 100%;
+      padding: 1rem;
+      height: 100%;
+      overflow: auto; }
+    .login-wrapper .box-image {
+      display: none; } }
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+  padding: 0px 1rem; }
+
+.header {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #E2E2E2;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 10;
+  background-color: #f8f8f8; }
+  @media (max-width: 576px) {
+    .header {
+      padding: 0.5rem 0px; } }
+  .header .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .header .logo img {
+    max-width: 100px;
+    width: 100%; }
+  .header .hotline {
+    font-weight: 500;
+    display: flex;
+    border-radius: 8px;
+    border: 1px solid #835AFD;
+    align-items: center; }
+    .header .hotline .icon {
+      padding: 0.5rem 0.5rem;
+      background-color: #835AFD;
+      color: #fff;
+      border-top-left-radius: 6px;
+      border-bottom-left-radius: 6px; }
+    .header .hotline .text {
+      padding: 0.3rem 0.5rem; }
+
+.main-container {
+  padding-top: 8rem;
+  padding-bottom: 2rem; }
+  .main-container .container {
+    max-width: 768px; }
+
+.main-title {
+  margin-top: 0px;
+  margin-bottom: 2rem;
+  font-family: "Popins",sans-serif; }
+
+.actions {
+  display: flex;
+  margin-top: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; }
+  @media (max-width: 576px) {
+    .actions {
+      display: block; }
+      .actions .user {
+        margin-bottom: 1rem; } }
+
+.user {
+  white-space: nowrap; }
+  .user .avatar {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px; }
+    .user .avatar img {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      object-fit: cover; }
+  .user .username {
+    display: inline-block;
+    vertical-align: middle;
+    color: #737380; }
+
+.empty-qa {
+  text-align: center;
+  margin: auto;
+  margin-top: 2rem; }
+  .empty-qa .icon {
+    margin-bottom: 1rem; }
+  .empty-qa .title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 1rem; }
+  .empty-qa .desc {
+    font-size: 0.875rem;
+    color: #737380; }
+
+.list-questions {
+  margin-top: 2rem; }
+  .list-questions .item {
+    background: #FEFEFE;
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.04);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease; }
+    .list-questions .item:hover {
+      transition: box-shadow 0.3s ease;
+      box-shadow: 0px 5px 24px rgba(0, 0, 0, 0.1); }
+  .list-questions .qa-title {
+    margin-top: 0px;
+    margin-bottom: 1rem;
+    font-weight: normal;
+    line-height: 1.5; }
+  .list-questions .bottom {
+    display: flex;
+    flex: wrap;
+    justify-content: space-between;
+    align-content: center; }
+  .list-questions .like {
+    color: #737380;
+    padding: 0.25rem;
+    text-decoration: none; }
+    .list-questions .like:hover {
+      color: #835AFD; }

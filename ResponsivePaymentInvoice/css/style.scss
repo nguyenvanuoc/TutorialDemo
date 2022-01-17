@@ -1,0 +1,553 @@
+/*Color*/
+
+$main:#41477A;
+$text:#1D262C;
+$desc:#6F7399;
+$lightgray:#90A0B7;
+$second:#F7685B;
+$warning:#F2994A;
+$info:#3A91C1;
+$danger:#EB5757;
+$success:#219653;
+$border:rgba(#5B63A9,0.1);
+
+
+// reset
+
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+body,html{
+    padding: 0px;
+    margin: 0px;
+    color: $text;
+    font-size: 14px;
+    font-family: "Popins",sans-serif;
+}
+
+/*header*/
+
+.header{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    padding: 0.5rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    .input-search{
+        width: 300px;
+        position: relative;
+        .icon{
+            position: absolute;
+            top: 0px;
+            left: 10px;
+            bottom: 0px;
+            margin: auto;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            margin: auto;
+            color: $desc;
+        }
+        .form-control{
+            width: 100%;
+            border: 1px solid transparent;
+            width: 100%;
+            padding: 0.5rem 1rem;
+            height: 32px;
+            outline: 0;
+            padding-left: 30px;
+            transition: all 0.3s ease;
+            margin-bottom: 0px;
+            &::placeholder{
+                color: $lightgray;
+            }
+            &:focus{
+                transition: all 0.3s ease;
+                border-color: $main;
+            }
+        }
+    }
+    .menu-right{
+        white-space: nowrap;
+        .item{
+            vertical-align: middle;
+            display: inline-block;
+            margin-left:1rem;
+            &.-noti{
+                .icon{
+                    width: 24px;
+                    height: 24px;
+                    position: relative;
+                    font-size: 24px;
+                    color: #C2CFE0;
+                }
+                .dot{
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    border:2px solid #fff;
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+                    background-color: $second;
+                }
+            }
+        }
+        
+    }
+}
+
+
+.avatar{
+    position: relative;
+    display: inline-block;
+    &:before{
+        content: "";
+        top: -2px;
+        right: -2px;
+        bottom: -2px;
+        left: -2px;
+        position: absolute;
+        border-radius: 50%;
+        background: linear-gradient(113.35deg, #884CB2 2.58%, #FD648E 97.8%);
+    }
+    img{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.main-title{
+    margin-top: 0px;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.subtitle{
+    font-size: 18px;
+    margin-bottom: 2rem;
+    font-weight: normal;
+    margin-top: 0px;
+}
+.text-desc{
+    font-size: 10px;
+    color: $desc;
+    font-weight: 300;
+}
+.divider-gray{
+    height: 1px;
+    border-bottom: 1px solid $border;
+    margin: 1.5rem 0px;
+}
+.nowrap{
+    white-space: nowrap;
+}
+
+.main-wrapper{
+    position: absolute;
+    overflow: auto;
+    top: 50px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    padding: 3rem 4rem;
+    display: flex;
+    
+}
+.main-content{
+    flex: 1;
+    margin-right: 4rem;
+    width: 0px;
+    .list-card{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 4rem;
+        font-family: 'Roboto Mono', monospace;
+        .item{
+            width: calc(50% - 1rem);
+            border-radius: 1.25rem;
+            border: 1px solid $border;
+            
+        }
+        .top{
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+        }
+        .info{
+            display: flex;
+            padding: 1.5rem 2rem;
+            justify-content: space-between;
+
+        }
+        .card-info{
+            flex: 1;
+            .text{
+                color: $lightgray;
+                font-size: 10px;
+                margin-bottom: 0.5rem;
+            }
+            .number{
+                font-size: 18px;
+                font-weight: bold;
+                color: $main;
+            }
+
+        }
+        .card-bottom{
+            border-top:1px solid $border;
+            padding: 1.5rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .name{
+                color: $main;
+                font-weight: bold;
+            }
+            .date{
+                color: $lightgray;
+                font-weight: bold;
+            }
+            .key{
+                text-transform: uppercase;
+                font-weight: normal;
+                font-size: 10px;
+                margin-bottom: 2px;
+            }
+        }
+        .active{
+            background: linear-gradient(113.35deg, #884CB2 2.58%, #FD648E 97.8%);
+            color: #fff;
+            border: 0px;
+            .card-info{
+                .text{
+                    color: #fff;
+                    opacity: .75;
+                }
+                .number{
+                    color: #fff;
+                    opacity: 0.75;
+                }
+            }
+            .card-bottom{
+                border-top-color: rgba(#fff,0.3);
+            }
+            .card-bottom{
+                .name{
+                    color: #fff;
+                    opacity: 0.75;
+
+                }
+                .date{
+                    color: #fff;
+                }
+                .key{
+                    opacity: .7;
+                }
+            }
+        }
+        
+    }
+}
+.main-sidebar{
+    width: 320px;
+}
+.table-content{
+    overflow: auto;
+}
+.table-result{
+    width: 100%;
+    white-space: nowrap;
+    td,th{
+        padding: 1rem;
+        border-bottom: 1px solid $border;
+        &:last-child{
+            padding-right: 0px;
+        }
+        &:first-child{
+            padding-left: 0px;
+        }
+    }
+    .date{
+        color: $desc;
+        font-size: 12px;
+    }
+    .payment-name{
+        white-space: nowrap;
+        .dot{
+            display: inline-block;
+            vertical-align: middle;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            position: relative;
+            background:  linear-gradient(133.9deg, rgba(243, 71, 122, 0.7) 0.24%, rgba(136, 76, 178, 0.7) 95.04%);
+            margin-right: 0.75rem;
+            &:before{
+                content: "";
+                position: absolute;
+                top: -3px;
+                left: -3px;
+                bottom: -3px;
+                right: -3px;
+                border-radius: 50%;
+                background:linear-gradient(133.9deg, rgba(243, 71, 122, 0.2) 0.24%, rgba(136, 76, 178, 0.2) 95.04%);
+            }
+        }
+    }
+    .status{
+        font-size: 12px;
+        text-transform: uppercase;
+        white-space: nowrap;
+        .dot{
+            display: inline-block;
+            vertical-align: middle;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            position: relative;
+            margin-right: 0.75rem;
+            &:before{
+                content: "";
+                position: absolute;
+                top: -3px;
+                left: -3px;
+                bottom: -3px;
+                right: -3px;
+                border-radius: 50%;
+                
+            }
+        }
+        &.-payment{
+            color: $warning;
+            .dot{
+                background-color: $warning;
+                &:before{
+                    border:1px solid $warning;
+                }
+            }
+        }
+        &.-refund{
+            color: $info;
+            .dot{
+                background-color: $info;
+                &:before{
+                    border:1px solid $info;
+                }
+            }
+        }
+        &.-credit{
+            color: #5A4C79;
+            .dot{
+                background-color: #5A4C79;
+                &:before{
+                    border:1px solid #5A4C79;
+                }
+            }
+        }
+    }
+    .number{
+        font-size: 12px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        &.-up{
+            color: $success;
+        }
+        &.-down{
+            color: $danger;
+        }
+    }
+    .more{
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        line-height: 22px;
+        text-align: center;
+        font-size: 12px;
+        background-color: #f2f2f2;
+        color: #d9d9d9;
+        text-decoration: none;
+        &:hover{
+            background-color: $main;
+            color: #fff;
+        }
+    }
+}
+
+.main-sidebar{
+    .box{
+        background: #FFFFFF;
+        box-shadow: 0px 4px 40px rgba(91, 99, 169, 0.3);
+        border-radius: 20px;
+        padding: 2rem;
+    }
+    .user{
+        text-align: center;
+        .name{
+            margin-bottom: 0.25rem;
+        }
+    }
+    .avatar{
+        margin-bottom: 1rem;
+        img{
+            width: 40px;
+            height: 40px;
+        }
+    }
+    .card-info-box{
+        text-align: center;
+        .number{
+            font-size: 18px;
+            margin: 0.5rem 0px;
+            color: #41477A;
+            font-weight: bold;
+        }
+    }
+}
+.box-billing-plan{
+    
+    .head{
+        text-align: center;
+        margin-bottom: 1rem;
+        .title{
+            margin-top: 0.5rem;
+        }
+    }
+    .note-box{
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+        background: rgba(91, 99, 169, 0.1);
+        border-radius: 5px;
+        font-size: 10px;
+        color: $desc;
+        .inner{
+            display: flex;
+        }
+        .icon{
+            margin-right: 1rem;
+            font-size: 16px;
+        }
+        .text-content{
+            p{
+                margin-bottom: 0.5rem;
+                &:before{
+                    width: 4px;
+                    height: 4px;
+                    content: "";
+                    border-radius: 50%;
+                    margin-right: 5px;
+                    vertical-align: middle;
+                    display: inline-block;
+                    background-color: $lightgray;
+                }
+            }
+        }
+    }
+}
+
+.bill-info{
+    display: flex;
+    flex-wrap: wrap;
+    .item{
+        margin-bottom: 10px;
+        margin-right: 10px;
+        &:last-child{
+            margin-left: 0px;
+        }
+    }
+    .text-desc{
+        white-space: nowrap;
+        margin-bottom: 0.5rem;
+        font-size: 10px;
+    }
+    .name{
+        font-size: 12px;
+        color: #41477A;
+    }
+}
+
+.card-total{
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    align-items: end;
+    .info-row{
+        display: flex;
+        color: #41477A;
+        margin-bottom: 0.875rem;
+        flex-wrap: wrap;
+        
+        .value{
+            flex: 1;
+            margin-left: 5px;
+            font-size: 10px;
+            &.total{
+                font-weight: bold;
+            }
+            
+        }
+        .key{
+            min-width: 50px;
+            white-space: nowrap;
+            text-align: right;
+            
+        }
+    }
+}
+
+
+//Responsive
+@media(max-width:991px){
+    .main-wrapper{
+        display: block
+    }
+    .main-content{
+        margin-right:0px;
+        width:100%;
+        max-width: 768px;
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+    .main-sidebar{
+        width: 100%;
+        max-width: 768px;
+        margin: auto;
+        .box{
+            padding: 1.5rem;
+        }
+    }
+}
+
+// Screen < 768
+@media(max-width:768px){
+    .main-content .list-card{
+        display: block;
+        .item{
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+    }
+    .header{
+        padding: 0.5rem 1rem;
+    }
+}
+
+
+//Screen < 576
+@media(max-width:576px){
+    .main-wrapper{
+        padding: 1rem 2rem;
+    }
+}

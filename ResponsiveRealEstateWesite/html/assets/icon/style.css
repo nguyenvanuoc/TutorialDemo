@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'housen';
+  src:  url('fonts/housen.eot?redwo6');
+  src:  url('fonts/housen.eot?redwo6#iefix') format('embedded-opentype'),
+    url('fonts/housen.ttf?redwo6') format('truetype'),
+    url('fonts/housen.woff?redwo6') format('woff'),
+    url('fonts/housen.svg?redwo6#housen') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'housen' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-right:before {
+  content: "\e900";
+}
+.icon-filter:before {
+  content: "\e901";
+}
+.icon-search:before {
+  content: "\e902";
+}

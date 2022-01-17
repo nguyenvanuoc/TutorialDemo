@@ -1,0 +1,125 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Icon    -->
+    <link rel="stylesheet" href="assets/icon/style.css">
+    <!-- Font Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <!-- Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>Document</title>
+    <!-- My Style -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="overlay"></div>
+    <header class="header">
+        <div class="container">
+            <div class="flex-box">
+                <a href="#" class="logo">
+                    <img src="images/logo.svg" alt="">
+                </a>
+                <ul class="menus">
+                    <li><a href="#">Buy a house</a></li>
+                    <li><a href="#">Rent a house</a></li>
+                    <li><a href="#">Mortgage</a></li>
+                </ul>
+                <div class="action">
+                    <button class="btn btn-second">Sign up</button>
+                </div>
+                <div class="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="hero-content" style="background-image: url(images/bg.png);">
+        <div class="container">
+            <h1 class="main-title" data-aos="fade-up"  data-aos-delay="500">Find your ideal home</h1>
+            <div class="desc" data-aos="flip-up"  data-aos-delay="1000">Search from more than 19 million of inspected appartments, houses, cottages, villas, manors
+                and
+                mansions</div>
+            <div class="box-search" data-aos="flip-up"  data-aos-delay="1500">
+                <div class="icon icon-search"></div>
+                <input type="text" class="form-control" placeholder="Search for address">
+                <button class="btn btn-main">Search</button>
+            </div>
+            <div class="list-results">
+                <div class="item">
+                    <div class="name">Calabasas, CA</div>
+                    <div class="info">
+                        <span class="icon-filter"></span> $1.5k+ / 2 Beds / Appt. ... 3 more
+                    </div>
+                    <a href="#" class="more">
+                        <span class="icon-arrow-right"></span>
+                    </a>
+                </div>
+                <div class="item">
+                    <div class="name">Calabasas, CA</div>
+                    <div class="info">
+                        <span class="icon-filter"></span> $1.5k+ / 2 Beds / Appt. ... 3 more
+                    </div>
+                    <a href="#" class="more icon-arrow-right">
+                    </a>
+                </div>
+                <div class="item">
+                    <div class="name">Calabasas, CA</div>
+                    <div class="info">
+                        <span class="icon-filter"></span> $1.5k+ / 2 Beds / Appt. ... 3 more
+                    </div>
+                    <a href="#" class="more">
+                        <span class="icon-arrow-right"></span>
+                    </a>
+                </div>
+                <div class="item">
+                    <div class="name">Calabasas, CA</div>
+                    <div class="info">
+                        <span class="icon-filter"></span> $1.5k+ / 2 Beds / Appt. ... 3 more
+                    </div>
+                    <a href="#" class="more">
+                        <span class="icon-arrow-right"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="copyright">Housen © 2020</div>
+                <div class="menus">
+                    <a href="#">About</a>
+                    <a href="#">FAQ</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Show Menu -->
+    <script>
+        $(".nav-toggle").click(function(){
+            $(".header .menus").toggleClass("show");
+            $(".overlay").addClass("show");
+        });
+        $(".overlay").click(function(){
+            $(".header .menus").removeClass("show");
+            $(".overlay").removeClass("show");
+        });
+    </script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

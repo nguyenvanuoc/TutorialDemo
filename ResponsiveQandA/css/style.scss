@@ -1,0 +1,322 @@
+$main:#835AFD;
+
+
+$text:#29292E;
+$lightgray:#A8A8B3;
+$desc:#737380;
+$border:#E2E2E2;
+
+// Reset
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+
+}
+
+body,html{
+    font-size: 16px;
+    color: $text;
+    background-color: #F8F8F8;
+    font-family: "Roboto",sans-serif;
+}
+.btn{
+    padding: 0.91rem 1.5rem;
+    border: 1px solid $lightgray;
+    background-color: #fff;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    span{
+        margin-right: 5px;
+    }
+    &:hover{
+        background-color: #f6f6f6;
+    }
+    &.btn-main{
+        background-color: $main;
+        color: #fff;
+        border-color: $main;
+        &:hover{
+            background-color: darken($main,10);
+        }
+    }
+}
+.form-control{
+    height: 50px;
+    padding: 0.75rem 1rem;
+    outline: 0px;
+    border: 1px solid $lightgray;
+    border-radius: 0.5rem;
+    width: 100%;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    font-family: "Roboto",sans-serif;
+    &::placeholder{
+        color: $lightgray;
+    }
+    &:focus{
+        transition: all 0.3s ease;
+        border-color: $main;
+    }
+}
+
+//* Login
+
+.login-wrapper{
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #fff;
+    .box-col{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .box-image{
+        background-color: $main;
+        padding: 1rem 2rem;
+        color: #fff;
+        .inner{
+            max-width: 320px;
+        }
+        img{
+            width: 100%;
+        }
+        .title{
+            font-family: "Popins",sans-serif;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        .desc{
+            font-size: 1rem;
+            line-height: 1.5;
+            opacity: 0.7;
+
+        }
+    }
+    .box-form{
+        max-width: 320px;
+        margin: auto;
+        .logo{
+            text-align: center;
+            margin-bottom: 2rem;
+            display: block;
+            img{
+                display: inline-block;
+            }
+        }
+        .btn{
+            width: 100%;
+        }
+        .btn-google{
+            margin-bottom: 1.5rem;
+            &:hover{
+                border-color: $main;
+            }
+            .icon{
+                display: inline-block;
+                vertical-align: middle;
+                img{
+                    width: 24px;
+                    height: 24px;
+                    object-fit: contain;
+                }
+            }
+        }
+        .or{
+            position: relative;
+            text-align: center;
+            color: $lightgray;
+            margin-bottom: 1.5rem;
+            &:before{
+                content: "";
+                height: 1px;
+                left: 0px;
+                right: 0px;
+                top: 0px;
+                bottom: 0px;
+                margin: auto;
+                position: absolute;
+                background-color: $lightgray;
+            }
+            span{
+                position: relative;
+                z-index: 2;
+                background-color: #fff;
+                padding: 0.5rem 1rem;
+            }
+        }
+        .btn-main{
+            margin-top: 1.5rem;
+        }
+        
+    }
+    @media(max-width:768px){
+        .box-col{
+            width: 100%;
+            padding: 1rem;
+            height: 100%;
+            overflow: auto;
+        }
+        .box-image{
+            display: none;
+        }
+        
+    }
+}
+
+.container{
+    max-width: 1170px;
+    margin: auto;
+    padding: 0px 1rem;
+}
+
+.header{
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid $border;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 10;
+    background-color: #f8f8f8;
+    @media(max-width:576px){
+        padding: 0.5rem 0px;
+    }
+    .header-inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .logo{
+        img{
+            max-width: 100px;
+            width: 100%;
+        }
+    }
+    .hotline{
+        font-weight: 500;
+        display: flex;
+        border-radius: 8px;
+        border: 1px solid $main;
+        align-items: center;
+        .icon{
+            padding: 0.5rem 0.5rem;
+            background-color: $main;
+            color: #fff;
+            border-top-left-radius: 6px;
+            border-bottom-left-radius: 6px;
+        }
+        .text{
+            padding: 0.3rem 0.5rem;
+        }
+    }
+}
+
+.main-container{
+    padding-top: 8rem;
+    padding-bottom: 2rem;
+    .container{
+        max-width: 768px;
+    }
+}
+.main-title{
+    margin-top: 0px;
+    margin-bottom: 2rem;
+    font-family: "Popins",sans-serif;
+
+}
+
+.actions{
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    @media(max-width:576px){
+        display: block;
+        .user{
+            margin-bottom: 1rem;
+        }
+    }
+}
+.user{
+    white-space: nowrap;
+    .avatar{
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 5px;
+        img{
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+    .username{
+        display: inline-block;
+        vertical-align: middle;
+        color: $desc;
+    }
+}
+
+.empty-qa{
+    text-align: center;
+    margin: auto;
+    margin-top: 2rem;
+    .icon{
+        margin-bottom: 1rem;
+    }
+    .title{
+        font-size: 1.125rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+    .desc{
+        font-size:0.875rem;
+        color:$desc;
+    }
+}
+
+.list-questions{
+    margin-top: 2rem;
+    .item{
+        background: #FEFEFE;
+        box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.04);
+        border-radius: 8px;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        cursor: pointer;
+        transition: box-shadow 0.3s ease;
+        &:hover{
+            transition: box-shadow 0.3s ease;
+            box-shadow: 0px 5px 24px rgba(#000,0.1);
+        }
+    }
+    .qa-title{
+        margin-top: 0px;
+        margin-bottom: 1rem;
+        font-weight: normal;
+        line-height: 1.5;
+    }
+    .bottom{
+        display: flex;
+        flex: wrap;
+        justify-content: space-between;
+        align-content: center;
+    }
+    .like{
+        color: $desc;
+        padding: 0.25rem;
+        text-decoration: none;
+        &:hover{
+            color: $main;
+        }
+    }
+}
