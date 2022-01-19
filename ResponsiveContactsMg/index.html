@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- My Style -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </head>
 <body>
@@ -77,7 +78,7 @@
                 </a>
             </div>
         </div>
-        <div class="sidebar-list-contacts">
+        <div class="sidebar-list-contacts" id="contacts">
             <div class="top">
                 <div class="nav-toggle btn">
                     <span class="material-icons">
@@ -112,7 +113,7 @@
                     </div>
                 </div>
                 <div class="list-users">
-                    <div class="item">
+                    <div class="item active">
                         <div class="avatar">
                             <img src="assets/images/avatarr-default.jpeg" alt="">
                             <span class="dot -online"></span>
@@ -260,26 +261,33 @@
                 </div>
             </div>
         </div>
-        <div class="box-info-content">
+        <div class="box-info-content" id="content">
             <div class="top">
-                <div class="item">
-                    <a href="#" class="btn">
-                        <span class="material-icons">
-                            person_add
-                        </span>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="#" class="btn">
-                        <span class="material-icons">
-                            search
-                        </span>
-                    </a>
-                </div>
-                <div class="item">
-                    <div class="avatar">
-                        <img src="assets/images/avatarr-default.jpeg" alt="">
-                        <span class="dot -online"></span>
+                <a href="#" id="back" class="btn back">
+                    <span class="material-icons">
+                        chevron_left
+                    </span>
+                </a>
+                <div class="menu-right">
+                    <div class="item">
+                        <a href="#" class="btn">
+                            <span class="material-icons">
+                                person_add
+                            </span>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#" class="btn">
+                            <span class="material-icons">
+                                search
+                            </span>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <div class="avatar">
+                            <img src="assets/images/avatarr-default.jpeg" alt="">
+                            <span class="dot -online"></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -403,5 +411,16 @@
             </div>
         </div>
     </div>
+    <script>
+        $("#contacts .item").click(function(){
+            $(this).parents("#contacts").addClass("hidden");
+            $("#content").addClass("active");
+        });
+        $("#back").click(function(e){
+            e.preventDefault();
+            $("#contacts").removeClass("hidden");
+            $("#content").removeClass("active");
+        });
+    </script>
 </body>
 </html>

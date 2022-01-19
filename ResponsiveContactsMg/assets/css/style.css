@@ -113,10 +113,14 @@ body, html {
 .list-users .item {
   display: flex;
   margin-top: 3rem; }
+  .list-users .item.active .actions .btn {
+    color: #6B59CC;
+    background: linear-gradient(0deg, rgba(77, 76, 172, 0.1), rgba(77, 76, 172, 0.1)), #FFFFFF; }
 
 .list-users .text-content {
   flex: 1;
-  margin: 0px 10px; }
+  margin: 0px 10px;
+  min-width: 0px; }
 
 .list-users .avatar {
   position: relative; }
@@ -169,7 +173,7 @@ img {
     display: flex;
     padding: 5px 2rem;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     border-bottom: 1px solid #ECEEF5;
     height: 84px; }
     .box-info-content .top .item {
@@ -177,6 +181,10 @@ img {
       .box-info-content .top .item:first-child {
         border-right: 1px solid #ECEEF5;
         padding-right: 10px; }
+    .box-info-content .top .menu-right {
+      display: flex; }
+    .box-info-content .top .back {
+      display: none; }
   .box-info-content .body {
     height: 100%;
     overflow: auto;
@@ -197,7 +205,9 @@ img {
   .box-info-content .user {
     display: flex; }
     .box-info-content .user .text-content {
-      margin-left: 1rem; }
+      margin-left: 1rem;
+      flex: 1;
+      min-width: 0px; }
     .box-info-content .user .avatar img {
       width: 114px;
       height: 114px;
@@ -236,3 +246,86 @@ img {
     background-color: #FAF9FF;
     display: inline-block;
     font-weight: bold; }
+
+@media (max-width: 1320px) {
+  .sidebar-list-contacts {
+    width: 420px; }
+  .sidebar-list-contacts .body {
+    padding: 1rem; }
+  .sidebar-list-contacts .top {
+    padding: 0.5rem 1rem;
+    height: 60px; }
+  .box-info-content .top {
+    height: 60px;
+    padding: 0.5rem 1rem; }
+  .box-info-content .body {
+    padding: 1rem; }
+  .box-info-content .info-row .value {
+    margin-left: 15px; } }
+
+@media (max-width: 1100px) {
+  .box-info-content {
+    display: none; }
+    .box-info-content.active {
+      display: block; }
+    .box-info-content .top .back {
+      display: block; }
+  .sidebar-list-contacts {
+    min-width: 0px;
+    flex: 1;
+    width: auto; }
+    .sidebar-list-contacts.hidden {
+      display: none; }
+    .sidebar-list-contacts .item {
+      cursor: pointer; }
+  .sidebar {
+    width: 60px;
+    padding: 5px; } }
+
+@media (max-width: 768px) {
+  .box-info-content .info-row {
+    display: block; }
+    .box-info-content .info-row .key {
+      text-align: left;
+      margin-bottom: 5px; }
+    .box-info-content .info-row .value {
+      margin-left: 0px; }
+  .btn {
+    height: 32px;
+    width: 32px; }
+    .btn span {
+      font-size: 18px;
+      line-height: 32px; }
+  .box-info-content .user .actions {
+    margin-top: 10px; }
+  .box-info-content .user .avatar img {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px; } }
+
+@media (max-width: 480px) {
+  .list-users .item {
+    flex-wrap: wrap;
+    margin-top: 2rem; }
+    .list-users .item .actions {
+      margin-top: 10px;
+      padding-left: 40px;
+      width: 100%;
+      display: none; }
+      .list-users .item .actions .btn {
+        width: 32px;
+        height: 32px;
+        margin: 0px 2px; }
+        .list-users .item .actions .btn span {
+          line-height: 32px;
+          font-size: 16px; }
+  .box-info-content .user {
+    display: block;
+    text-align: center; }
+  .box-info-content .user .avatar {
+    margin-bottom: 10px; }
+    .box-info-content .user .avatar img {
+      width: 80px;
+      height: 80px; }
+  .box-info-content .user .actions .btn {
+    margin-right: 2px; } }
