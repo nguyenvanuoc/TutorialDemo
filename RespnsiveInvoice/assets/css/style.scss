@@ -1,0 +1,277 @@
+// Colors
+
+$main:#0034BB;
+$text:#2B2B2B;
+$textD:#ADADAD;
+
+
+// Reset
+
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body,html{
+    font-family: "Roboto",serif;
+    font-size: 16px;
+    background: #F4F4F4;
+    line-height: 1.5;
+}
+
+// Header
+
+.header{
+    display: flex;
+    background: #fff;
+    padding: 15px 20px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+    .logo{
+        font-size: 32px;
+        font-weight: bold;
+        color: $main;
+    }
+    .search{
+        position: relative;
+        .icon{
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            img{
+                width: 24px;
+                height: 24px;
+                object-fit: cover;
+            }
+        }
+        .form-control{
+            padding:8px 10px;
+            border-radius: 8px;
+            font-size: 1rem;
+            width: 100%;
+            background: rgba($main,0.06);
+            border: 1px solid transparent;
+            color: $text;
+            padding-left: 40px;
+            outline: 0px;
+            
+            &:focus{
+                background: #fff;
+                border-color: $main;
+            }
+            &::placeholder{
+                color: rgba($main,0.5);
+            }
+        }
+    }
+
+}
+.main-content{
+    padding: 0px 20px;
+}
+.invoice-container{
+    max-width: 800px;
+    margin: auto;
+    padding:3rem;
+    background: #fff;
+    .top{
+        margin-bottom: 4rem;
+        display: flex;
+        justify-content: space-between;
+        .top-left{
+            color: $main;
+
+            
+        }
+        .main{
+            font-size: 40px;
+            text-transform: uppercase;
+            font-weight: 500;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .code{
+            font-size: 24px;
+        }
+        .date{
+            font-size: 18px;
+            color: $textD;
+            margin-bottom: 10px;
+        }
+
+    }
+    
+}
+.bill-box{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+    color: $textD;
+    .left,.right{
+        max-width: 240px;
+    }
+    .text-m{
+        font-size: 18px;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+    }
+    .title{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        font-weight: 500;
+        color: $text;
+    }
+}
+.table-bill{
+    table{
+        width: 100%;
+        border-collapse: 0px;
+        border-spacing: 0px;
+        font-size: 1rem;
+    }
+    th,td{
+        text-align: left;
+        padding: 10px 10px;
+        font-weight: 500;
+    }
+    td{
+        padding: 15px 10px;
+    }
+    th{
+        text-transform: uppercase;
+        color: $main;
+        font-weight: 500;
+    }
+    .quantity{
+        width: 100px;
+    }
+    .cost{
+        text-align: right;
+        white-space: nowrap;
+    }
+    .total{
+        font-size: 24px;
+        color: $main;
+        td{
+            font-weight: normal;
+            border-top: 1px solid #ececec;
+        }
+        .number{
+            text-align: right;
+            font-weight: 600;
+        }
+    }
+}
+.actions{
+    text-align: center;
+    margin-top: 4rem;
+    .btn{
+        margin: 3px;
+        padding: 8px 10px;
+        font-size: 1rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        border: 0px;
+        min-width: 130px;
+        color: $main;
+        border-radius: 8px;
+        background: rgba($main,0.06);
+        cursor: pointer;
+        &:hover{
+            background: rgba($main,0.1);
+        }
+    }
+}
+.note{
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 12px;
+    color: $textD;
+}
+
+
+//Responsive
+
+@media(max-width:1320px){
+    body,html{
+        font-size: 14px;
+    }
+    .invoice-container .top .date{
+        font-size: 14px;
+    }
+    .invoice-container .top .main{
+        font-size: 32px;
+    }
+    .invoice-container .top .code{
+        font-size: 18px;
+    }
+    .bill-box .text-m{
+        font-size: 14px;
+    }
+    .bill-box .title{
+        font-size: 1.5rem;
+    }
+    .table-bill .total{
+        font-size: 16px;
+    }
+}
+
+@media(max-width:768px){
+    .invoice-container .top{
+        display: block;
+        .top-left{
+            margin-bottom: 1rem;
+        }
+    }
+    .bill-box{
+        display: block;
+    }
+    .bill-box .left, .bill-box .right{
+        max-width: 100%;
+    }
+    .table-bill{
+        table,tbody,tfoot,td,th,tr{
+            display: block;
+        }
+        th{
+            display: none;
+        }
+        tbody tr{
+            padding: 10px 0px;
+            border-bottom: 1px solid #e5e5e5;
+            td:first-child{
+                display: none;
+            }
+        }
+        td{
+            padding: 5px 0px;
+        }
+        .cost{
+            text-align: left;
+        }
+        .total{
+            margin-top: 20px;
+            td{
+                border-top: 0px;
+            }
+            .number{
+                text-align: left;
+            }
+        }
+    }
+}
+
+@media(max-width:420px){
+    .actions{
+        .btn{
+            width: 100%;
+            margin: 5px 0px;
+        }
+    }
+    .header{
+        display: block;
+    }
+}

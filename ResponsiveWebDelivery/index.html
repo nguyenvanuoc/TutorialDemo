@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Delivery template</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- My style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="assets/images/logo.svg" alt="">
+            </div>
+            <div class="menus">
+                <a href="#">Home</a>
+                <a href="#">Our Services</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="box-content">
+            <ul class="tabs">
+                <li class="active"><a href="#">Parcel</a></li>
+                <li><a href="#">Food</a></li>
+            </ul>
+            <h1 class="main-title">Fast Responses
+            Fast Delivery</h1>
+            <div class="desc">
+                Lorem Ipsum is simply dummy text of the printing
+                and typesetting industry. Lorem Ipsum has been the
+                make a type specimen book.
+            </div>
+            <div class="actions">
+                <button class="btn btn-main">Book a Delivery</button>
+            </div>
+        </div>
+        <div class="box-image">
+            <img src="assets/images/banner.png" alt="">
+        </div>
+    </div>
+    <script>
+        $(".nav-toggle").click(function(){
+            $(".menus").toggleClass("show");
+            $(".overlay").toggleClass("show");
+        });
+        $(".overlay").click(function(){
+            $(".menus").removeClass("show");
+            $(".overlay").removeClass("show");
+        });
+    </script>
+</body>
+</html>
