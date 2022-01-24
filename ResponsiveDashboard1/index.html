@@ -1,0 +1,694 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- Font Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Jquery 3.6.0  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- HighChart -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+
+    <!-- My Style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="assets/vendor/dl/style.css">
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="header-mobile">
+        <div class="logo">
+            <img src="assets/images/logo.svg" alt="">
+        </div>
+        <div class="nav-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </div>
+    <div class="main-wrapper">
+        <div class="sidebar">
+            <div class="top">
+                <a href="#" class="logo">
+                    <span class="image">
+                        <img src="assets/images/logo.svg" alt="">
+                    </span>
+                    <span class="text">Dlex</span>
+                </a>
+
+            </div>
+            <div class="box-menus">
+                <ul>
+                    <li class="active">
+                        <a href="#">
+                            <span class="icon">
+                                <img src="assets/images/icons/Graph.svg" alt="">
+                            </span>
+                            <span class="text"> Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon">
+                                <img src="assets/images/icons/Chart.svg" alt="">
+                            </span>
+                            <span class="text"> Overview</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon">
+                                <img src="assets/images/icons/Chat.svg" alt="">
+                            </span>
+                            <span class="text"> Chat</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon">
+                                <img src="assets/images/icons/User.svg" alt="">
+                            </span>
+                            <span class="text"> Team</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon">
+                                <img src="assets/images/icons/Setting.svg" alt="">
+                            </span>
+                            <span class="text"> Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom">
+                <div class="user">
+                    <div class="avatar">
+                        <img src="assets/uploads/avatar.png" alt="">
+                    </div>
+                    <span class="text-m">Jane Smith</span>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="top-menu">
+                <h1 class="title">Hello Moe <span class="label label-warning">Premium</span></h1>
+                <div class="search">
+                    <button class="btn btn-search">
+                        <span class="icon icon-search"></span>
+                        
+                    </button>
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+            </div>
+            <div class="row-box top-statis">
+                <div class="col col3">
+                    <div class="widget-box widget-statis">
+                        <div class="top">
+                            <div class="title">Total users</div>
+                            <div class="arrow up">
+                                <span class="icon icon-trending_up"></span>   
+                                <span class="number">6.9%</span>
+                            </div>
+                        </div>
+                        <div class="statis-box">
+                            <span class="number">
+                                72,350
+                            </span>
+                            <div class="chart-canvas" data-area-chart="10, 60, 40 , 10, 20, 10, 40, 10, 50, 10, 10"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col3">
+                    <div class="widget-box widget-statis">
+                        <div class="top">
+                            <div class="title">Sessions</div>
+                            <div class="arrow down">
+                                <span class="icon icon-trending_down"></span>   
+                                <span class="number">12.5%</span>
+                            </div>
+                        </div>
+                        <div class="statis-box">
+                            <span class="number">
+                                29.4%
+                            </span>
+                            <div class="chart-canvas" data-area-chart="10, 60, 40 , 10, 20, 10, 40, 10, 50, 10, 10"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col3">
+                    <div class="widget-box widget-statis">
+                        <div class="top">
+                            <div class="title">avg. click rate</div>
+                            <div class="arrow up">
+                                <span class="icon icon-trending_up"></span>   
+                                <span class="number">12.5%</span>
+                            </div>
+                        </div>
+                        <div class="statis-box">
+                            <span class="number">
+                                29.4%
+                            </span>
+                            <div class="chart-canvas" data-area-chart="10, 60, 40 , 10, 20, 10, 40, 10, 50, 10, 10"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col3">
+                    <div class="widget-box widget-statis">
+                        <div class="top">
+                            <div class="title">pageviews</div>
+                            <div class="arrow up">
+                                <span class="icon icon-trending_up"></span>   
+                                <span class="number">12.5%</span>
+                            </div>
+                        </div>
+                        <div class="statis-box">
+                            <span class="number">
+                                29.4%
+                            </span>
+                            <div class="chart-canvas" data-area-chart="10, 60, 40 , 10, 20, 10, 40, 10, 50, 10, 10"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row-box top-work-content">
+                <div class="col col8">
+                    <div class="widget-box">
+                        <div class="widget-head">
+                            <div class="text-content">
+                                <h2 class="title">Your work summary</h2>
+                                <div class="desc">Nov - July</div>
+                            </div>
+                            <div class="note-box">
+                                <div class="item no1">
+                                    <div class="text-m">Last 6 months</div>
+                                    <div class="number">$8,620</div>
+                                </div>
+                                <div class="item no2">
+                                    <div class="text-m">Previous</div>
+                                    <div class="number">$8,620</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget-body">
+                            <div class="chart-canvas" style="height: 250px;" id="chart1">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col4">
+                    <div class="widget-box">
+                        <div class="widget-head">
+                            <div class="text-content">
+                                <h2 class="title">Top countries</h2>
+                                <div class="desc">Favorites</div>
+                            </div>
+                        </div>
+                        <div class="widget-body">
+                            <div class="list-countries">
+                                <div class="item">
+                                    <div class="icon">
+                                        <img src="assets/images/flags/belgium.svg" alt="">
+                                    </div>
+                                    <div class="text-content">
+                                        <span class="text">Belgium</span>
+                                        <span class="number">7.5K</span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="icon">
+                                        <img src="assets/images/flags/france.svg" alt="">
+                                    </div>
+                                    <div class="text-content">
+                                        <span class="text">France</span>
+                                        <span class="number">7.5K</span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="icon">
+                                        <img src="assets/images/flags/USA.svg" alt="">
+                                    </div>
+                                    <div class="text-content">
+                                        <span class="text">USA</span>
+                                        <span class="number">7.5K</span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="icon">
+                                        <img src="assets/images/flags/germany.svg" alt="">
+                                    </div>
+                                    <div class="text-content">
+                                        <span class="text">Germany</span>
+                                        <span class="number">7.5K</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget-footer">
+                            <a href="#" class="more">
+                                <span class="text">Details</span>
+                                <span class="icon-keyboard_arrow_right"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row-box bottom-work-content">
+                <div class="col col4">
+                    <div class="widget-box">
+                        <div class="widget-head">
+                            <div class="text-content">
+                                <h2 class="title">Segmentation</h2>
+                                <div class="desc">All users</div>
+                            </div>
+                        </div>
+                        <div class="widget-body">
+                            <div class="box-chart-progress">
+                                <div class="note">
+                                    <div class="item no1">
+                                        <span class="dot"></span>
+                                        <span class="text-m">Not specified</span>
+                                    </div>
+                                    <div class="item no2">
+                                        <span class="dot"></span>
+                                        <span class="text-m">Male</span>
+                                    </div>
+                                    <div class="item no3">
+                                        <span class="dot"></span>
+                                        <span class="text-m">Female</span>
+                                    </div>
+                                    <div class="item no4">
+                                        <span class="dot"></span>
+                                        <span class="text-m">Other</span>
+                                    </div>
+                                </div>
+                                <div class="progress" style="height: 160px;">
+                                    <div class="bar" style="background-color: #F0F1F2;height: 20%;"></div>
+                                    <div class="bar" style="background-color: #CACCF7;height: 20%;"></div>
+                                    <div class="bar" style="background-color: #828AED;height: 20%;"></div>
+                                    <div class="bar" style="background-color: #4A4DE6;height: 40%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget-footer">
+                            <a href="#" class="more">
+                                <span class="text">Details</span>
+                                <span class="icon-keyboard_arrow_right"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col4">
+                    <div class="widget-box">
+                        <div class="widget-head">
+                            <div class="text-content">
+                                <h2 class="title">Satisfaction rate</h2>
+                                <div class="desc">From all projects</div>
+                            </div>
+                        </div>
+                        <div class="widget-body">
+                            <div class="chart-canvas" style="height: 160px;" id="chart2"></div>
+                        </div>
+                        <div class="widget-footer">
+                            <a href="#" class="more">
+                                <span class="text">Details</span>
+                                <span class="icon-keyboard_arrow_right"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col4">
+                    <div class="widget-box">
+                        <div class="widget-head">
+                            <div class="text-content">
+                                <h2 class="title">Monthly expenses</h2>
+                                <div class="desc">All users</div>
+                            </div>
+                        </div>
+                        <div class="widget-body">
+                            <div class="chart-canvas" style="height: 160px;" id="chart3"></div>
+                        </div>
+                        <div class="widget-footer">
+                            <a href="#" class="more">
+                                <span class="text">Details</span>
+                                <span class="icon-keyboard_arrow_right"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // HightChart
+
+        Highcharts.SparkLine = function (a, b, c) {
+            var hasRenderToArg = typeof a === 'string' || a.nodeName,
+                options = arguments[hasRenderToArg ? 1 : 0],
+                defaultOptions = {
+                    chart: {
+                        backgroundColor: "transparent",
+                        margin: [0, 0, 0, 0],
+                        // small optimalization, saves 1-2 ms each sparkline
+                    },
+                    title: {
+                        text: ''
+                    },
+                    credits: {
+                        enabled: false
+                    },
+                    xAxis: {
+                        labels: {
+                            enabled: false
+                        },
+                        title: {
+                            text: null
+                        },
+                        visible: false,
+                        startOnTick: false,
+                        endOnTick: false,
+                        gridLineWidth: 0,
+                        tickPositions: [],
+                    },
+                    yAxis: {
+                        gridLineWidth: 0,
+                        labels: {
+                            enabled: false
+                        },
+                        title: {
+                            text: null
+                        },
+                    },
+                    legend: {
+                        enabled: false
+                    }
+                };
+
+            options = Highcharts.merge(defaultOptions, options);
+
+            return hasRenderToArg ?
+                new Highcharts.Chart(a, options, c) :
+                new Highcharts.Chart(options, b);
+        };
+
+        var start = +new Date(),
+            $tds = $('[data-area-chart]'),
+            fullLen = $tds.length,
+            n = 0;
+
+        // Creating 153 sparkline charts is quite fast in modern browsers, but IE8 and mobile
+        // can take some seconds, so we split the input into chunks and apply them in timeouts
+        // in order avoid locking up the browser process and allow interaction.
+        function doChunk() {
+            var time = +new Date(),
+                i,
+                len = $tds.length,
+                $td,
+                stringdata,
+                arr,
+                data,
+                chart;
+
+            for (i = 0; i < len; i += 1) {
+                $td = $($tds[i]);
+                console.log("-------");
+                stringdata = $td.data('area-chart');
+                arr = stringdata.split('; ');
+                data = $.map(arr[0].split(', '), parseFloat);
+                $td.highcharts('SparkLine', {
+                    series: [{
+                        data: data,
+                        type: "areaspline",
+                        color: "#3855B3",
+                        lineWidth: 1.5,
+                        dataLabels: {
+                            enabled: false,
+                        }
+                    }],
+                    plotOptions: {
+                        areaspline: {
+                            fillOpacity: 0,
+                            
+                            enableMouseTracking: false,
+                            marker: {
+                                enabled: false
+                            }
+                        },
+
+                    },
+                    xAxis: {
+                        categories: ['Dec',
+                            'Jan',
+                            'Feb',
+                            'Mar',
+                            'Apr',
+                            'Apr',
+                            'Apr',
+                            'Apr',
+                            'Apr',
+                            'Apr',
+                            'May',
+                            'Jun',],
+                    },
+                    tooltip: {
+                        enabled:false,
+                        formatter: function () {
+                            var sliceIndex = this.point.index;
+                            var sliceName = this.series.chart.axes[0].categories[sliceIndex];
+                            return '<b>' + sliceName +
+                                '</b> <br/>    <b>' + this.y + '</b>';
+                        }
+                    },
+                });
+            }
+        }
+        doChunk();
+
+        Highcharts.chart('chart1', {
+            chart: {
+                type: 'areaspline',
+                backgroundColor: '#fff',
+                margin: [0, 0, 0, 0],
+            },
+            title: {
+                text: null
+            },
+            legend: {
+                enabled: false,
+            },
+            xAxis: {
+                categories: [
+                    'Dec',
+                    'Jan',
+                    'Feb',
+                    'Mar',
+                    'Apr',
+                    'May',
+                    'Jun',
+
+                ],
+                labels: {
+                    style: {
+                        color: '#858585',
+                        fontWeight: 'normal',
+                    }
+                },
+                lineWidth: 0,
+                gridLineWidth: 1,
+                gridColor: "#F0F1F2"
+            },
+            yAxis: {
+                title: {
+                    text: null
+                },
+                labels: {
+                    style: {
+                        color: '#858585',
+                        fontWeight: 'normal',
+                    }
+                },
+                gridLineWidth: 0,
+            },
+            tooltip: {
+                shared: true,
+                valueSuffix: ' units'
+            },
+            credits: {
+                enabled: false
+            },
+            plotOptions: {
+                areaspline: {
+                    fillOpacity: 0,
+                    marker: {
+                        enabled: false
+                    }
+                },
+
+            },
+            series: [{
+                name: 'John',
+                color: '#4A4DE6',
+                fill: 'transparent',
+                data: [3, 4, 3, 5, 4, 10, 12]
+            }, {
+                name: 'Jane',
+                color: '#F0D961',
+                data: [1, 3, 4, 3, 3, 5, 4]
+            }]
+        });
+
+
+
+    Highcharts.chart('chart2', {
+
+        chart: {
+            type: 'solidgauge',
+            margin: [0, 0, 0, 0],
+            backgroundColor: 'transparent'
+        },
+        title: null,
+        yAxis: {
+            min: 0,
+            max: 100,
+            lineWidth: 0,
+            tickWidth: 0,
+            tickPositions: [0, 100],
+            tickmarkPlacement: 'between',
+            minorTickLength: 0,
+            labels: {
+                enabled: true,
+                x: 0, y: 25,
+                style: {
+                    color: '#999',
+                }
+            },
+
+        },
+        pane: {
+            size: '150%',
+            center: ['50%', '80%'],
+            startAngle: -90,
+            endAngle: 90,
+            background: {
+                borderWidth: 20,
+                backgroundColor: '#EAEAFD',
+                shape: 'arc',
+                borderColor: '#EAEAFD',
+                outerRadius: '90%',
+                innerRadius: '90%'
+            }
+        },
+        tooltip: {
+            enabled: false
+        },
+        plotOptions: {
+            solidgauge: {
+                borderColor: '#4A4DE6',
+                borderWidth: 15,
+                radius: 90,
+                innerRadius: '90%',
+                dataLabels: {
+                    y: -25,
+                    borderWidth: 0,
+                    useHTML: true
+                }
+            }
+        },
+        series: [{
+            name: 'windSpeed',
+            data: [80],
+            dataLabels: {
+                format: '<div style="text-align:center;"><span style="font-size:24px;color:#4A4DE6;">{y}%</span> <br/> <span style="font-weight:normal;color:#999">Based on likes</span></div>'
+            }
+
+        }],
+
+        credits: {
+            enabled: false
+        },
+    });
+
+    var svg;
+    svg = $('#chart2 svg');
+    if (svg.length > 0) {
+        var path = $('#chart2 path');
+        if (path.length > 1) {
+            // First path is gauge background
+            path[0].setAttributeNS(null, 'stroke-linejoin', 'round');
+            // Second path is gauge value
+            path[1].setAttributeNS(null, 'stroke-linejoin', 'round');
+        }
+    }
+    Highcharts.chart('chart3', {
+
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: null
+        },
+        yAxis: {
+            allowDecimals: false,
+            title: {
+                text: null
+            }
+        },
+        xAxis: {
+            categories: [
+                'Jan',
+                'Feb',
+                'Mar',
+                'Apr',
+                'May',
+                'Jun',
+                'Jul'
+            ],
+            crosshair: true
+        },
+        credits: {
+            enabled: false,
+        },
+        legend: {
+            enabled: false,
+        },
+        tooltip: {
+            formatter: function () {
+                return '<b>' + this.series.name + '</b><br/>' +
+                    this.point.y + ' ' + this.point.name.toLowerCase();
+            }
+        },
+        series: [
+            {
+                name: 'Tokyo',
+                color: "#4A4DE6",
+                data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6]
+
+            }, {
+                name: 'New York',
+                color: "#CACCF7",
+                data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0]
+
+            },
+        ]
+    });
+    </script>
+    <!-- Show Menu Mobile -->
+    <script>
+        $(".nav-toggle").click(function(){
+            $(".sidebar").toggleClass("show");
+            $(".overlay").toggleClass("show");
+        });
+        $(".overlay").click(function(){
+            $(".sidebar").removeClass("show");
+            $(this).removeClass("show");
+        });
+    </script>
+</body>
+</html>
