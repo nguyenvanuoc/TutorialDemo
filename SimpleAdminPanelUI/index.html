@@ -1,0 +1,153 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Admin Panel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <!-- fontIcon -->
+    <link rel="stylesheet" href="assets/vendors/vuesax-icon/style.css">
+    <link rel="stylesheet" href="assets/vendors/font-apicon/css/style.css">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="nav-toggle">
+            <span class="-ap icon_fluent_navigation_24_filled"></span>
+        </div>
+        <div class="sidebar">
+            <div class="userbox">
+                <div class="avatar">
+                    <img src="assets/uploads/avatar3.png" alt="">
+                </div>
+                <div class="username">Company</div>
+            </div>
+            <div class="menu-box">
+                <ul class="menus">
+                    <li class="active">
+                        <a href="#">
+                            <span class="icon isax-home-21"></span>
+                            <span class="text-m">General</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon isax-people1"></span>
+                            <span class="text-m">Users</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon isax-chart-211"></span>
+                            <span class="text-m">Statistic</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon isax-card1"></span>
+                            <span class="text-m">Billing</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="logout-box">
+                <a href="#" class="btn">
+                    <span class="icon isax-logout-11"></span>
+                    <span class="text-m">Sign out</span>
+                </a>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="page-home">
+                <div class="home-top-user">
+                    <div class="avatar">
+                        <span class="isax-gallery1"></span>
+                    </div>
+                    <div class="name">Workspace name</div>
+                    <a href="#" class="edit isax-edit-21"></a>
+                </div>
+                <h2 class="main-title">Workspace admins</h2>
+                <div class="list-users">
+                    <div class="item">
+                        <div class="close -ap icon_fluent_dismiss_24_regular"></div>
+                        <div class="inner">
+                            <div class="avatar">
+                                <img src="assets/uploads/avatar1.png" alt="">
+                            </div>
+                            <div class="name">John Johnsnon</div>
+                            <div class="pos">CEO</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="close -ap icon_fluent_dismiss_24_regular"></div>
+                        <div class="inner">
+                            <div class="avatar">
+                                <img src="assets/uploads/avatar2.png" alt="">
+                            </div>
+                            <div class="name">Jane Cooper</div>
+                            <div class="pos">Design Lead</div>
+                        </div>
+                    </div>
+
+                    <div class="item -add">
+                        <div class="inner">
+                            <span class="-ap icon icon_fluent_add_24_regular"></span>
+                            <span class="text-m">Add admin</span>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="main-title">Settings</h2>
+                <div class="list-settings">
+                    <div class="item">
+                        <div class="label-text">Week start</div>
+                        <div class="text-content">
+                            <div class="select-custom">
+                                <select name="" id="" class="form-control">
+                                    <option value="">Monday</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="label-text">Notification</div>
+                        <div class="text-content">
+                            <div class="toggle-check">
+                                <input type="checkbox" class="check">
+                                <span class="name"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="label-text">Week start</div>
+                        <div class="text-content">
+                            <div class="select-custom">
+                                <select name="" id="" class="form-control">
+                                    <option value="">Monday</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="label-text">Notification</div>
+                        <div class="text-content">
+                            <div class="toggle-check">
+                                <input type="checkbox" class="check">
+                                <span class="name"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group-buttons">
+                    <button class="btn btn-main">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

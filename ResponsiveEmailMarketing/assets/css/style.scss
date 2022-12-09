@@ -1,0 +1,203 @@
+$main:#DD4141;
+$text:#070550;
+$desc:#4E4E4E;
+$light:#888888;
+$border:#B5B5B5;
+
+
+// Reset
+
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body,html{
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    color: $text;
+}
+
+.wrapper{
+    max-width: 1100px;
+    margin: auto;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-top: 100px;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+.header{
+    position: fixed;
+    top: 0px;
+    background-color: #fff;
+    z-index: 2;
+    left: 0px;
+    right: 0px;
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    .logo{
+        display: flex;
+        align-items: center;
+    }
+    .title{
+        font-size: 18px;
+        font-weight: 600;
+        display: block;
+        margin-left: 5px;
+    }
+    .text-m{
+        color: #151284;
+    }
+}
+
+.box-subcribe{
+    max-width: 800px;
+    width: 100%;
+    .main-title{
+        text-align: center;
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+    .main-desc{
+        max-width: 670px;
+        margin: auto;
+        color: $desc;
+        text-align: center;
+    }
+    .input-sub{
+        display: flex;
+        max-width: 560px;
+        margin: 2rem auto;
+        width: 100%;
+        .form-control{
+            flex: 1;
+            font-size: 1.25rem;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            padding: 1rem;
+            border: 1px solid $border;
+            outline: 0px;
+            width: 100%;
+            border-right: 0px;
+            &:focus{
+                border-color: $main;
+            }
+        }
+        .btn{
+            padding: 1rem 2rem;
+            font-size: 20px;
+            border: 0px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            background-color: $main;
+            color: #fff;
+            cursor: pointer;
+            &:hover{
+                background-color: darken($main,10);
+            }
+        }
+
+    }
+}
+
+.followers-box{
+    text-align: center;
+    .users{
+        margin-bottom: 0.25rem;
+        display: flex;
+        justify-content: center;
+    }
+    .avatar{
+        display: inline-flex;
+        margin-left: -10px;
+        &:first-child{
+            margin-left: 0px;
+        }
+        img{
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+    .text-m{
+        font-size: 14px;
+        font-weight: 600;
+    }
+}
+
+.box-user-mess{
+    display: flex;
+    
+    background-color: #29303F;
+    color: #fff;
+    border-radius: 10px;
+    align-items: center;
+    max-width: 560px;
+    margin: auto;
+    margin-top: 2rem;
+    .image{
+        width: 170px;
+        height: 100%;
+        align-self: stretch;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+    }
+    .text-content{
+        flex: 1;
+        min-width: 0px;
+        padding: 1rem;
+    }
+    .mess{
+        margin-bottom: 0.75rem;
+        line-height: 1.5;
+    }
+    .name{
+        font-size: 14px;
+        font-weight: 600;
+        
+    }
+    .pos{
+        font-size: 14px;
+        opacity: 0.7;
+        margin-top: 0.25rem;
+    }
+}
+
+@media(max-width:576px){
+    body,html{
+        font-size: 14px;
+    }
+    .box-subcribe .main-title{
+        font-size: 2rem;
+    }
+    .box-user-mess{
+        display: block;
+        padding: 1rem  0px;
+        .image{
+            width: 48px;
+            height: auto;
+            margin-left: 1rem;
+            img{
+                height: 48px;
+                width: 48px;
+                border-radius: 50%;
+            }
+        }
+    }
+}
